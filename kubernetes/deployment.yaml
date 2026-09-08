@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tigergate-test-c
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: tigergate-test-c }
+  template:
+    metadata:
+      labels: { app: tigergate-test-c }
+    spec:
+      containers:
+        - name: app
+          image: tigergate-test-c:latest
