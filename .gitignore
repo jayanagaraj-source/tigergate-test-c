@@ -1,0 +1,7 @@
+build/
+*.o
+test_app
+.terraform/
+.terraform.lock.hcl
+*.tfstate*
+__pycache__/

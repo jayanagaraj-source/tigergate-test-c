@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: tigergate-test-c
+Version: 0.2.0
+Summary: Security-test fixture: same packages declared in multiple files.
+Requires-Dist: Flask==0.12.2
+Requires-Dist: Jinja2==2.10
+Requires-Dist: requests==2.19.1
+Requires-Dist: PyYAML==3.13
+Requires-Dist: urllib3==1.24.1
+Requires-Dist: cryptography==2.3
+Requires-Dist: Django==2.0.0
+Requires-Dist: paramiko==2.4.1

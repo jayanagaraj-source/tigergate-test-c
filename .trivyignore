@@ -1,0 +1,2 @@
+# Intentionally empty. This fixture WANTS all findings reported.
+# Add CVE IDs here only to test ignore/allowlist behaviour.

@@ -1,0 +1,23 @@
+# Minimal custom Semgrep rules to complement `--config auto`.
+rules:
+  - id: tigergate-system-call
+    languages: [c]
+    severity: ERROR
+    message: OS command execution with interpolated input (CWE-78).
+    patterns:
+      - pattern: system($CMD)
+  - id: tigergate-strcpy
+    languages: [c]
+    severity: WARNING
+    message: Unbounded strcpy (CWE-120). Use strncpy/snprintf with bounds.
+    patterns:
+      - pattern: strcpy($DST, $SRC)
+  - id: tigergate-format-string
+    languages: [c]
+    severity: ERROR
+    message: Non-literal format string (CWE-134).
+    patterns:
+      - pattern: printf($FMT)
+      - metavariable-pattern:
+          metavariable: $FMT
+          patterns: [{ pattern-not: '"..."' }]

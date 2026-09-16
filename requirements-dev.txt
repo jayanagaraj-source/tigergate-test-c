@@ -1,0 +1,10 @@
+# Same vulnerable pins as requirements.txt, duplicated for multi-file SCA testing.
+-r requirements.txt
+Flask==0.12.2
+Jinja2==2.10
+requests==2.19.1
+PyYAML==3.13
+urllib3==1.24.1
+cryptography==2.3
+Django==2.0.0
+paramiko==2.4.1

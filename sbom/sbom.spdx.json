@@ -1,0 +1,25 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "tigergate-test-c-sbom",
+  "documentNamespace": "https://tigergate.example/spdx/tigergate-test-c-0.2.0",
+  "creationInfo": {
+    "created": "2026-09-11T00:00:00Z",
+    "creators": ["Tool: hand-authored-fixture-0.2.0", "Organization: tigergate"]
+  },
+  "packages": [
+    { "SPDXID": "SPDXRef-Package-root", "name": "tigergate-test-c", "versionInfo": "0.2.0", "downloadLocation": "NOASSERTION", "licenseConcluded": "NOASSERTION", "copyrightText": "NOASSERTION" },
+    { "SPDXID": "SPDXRef-openssl", "name": "openssl", "versionInfo": "1.0.2u", "downloadLocation": "NOASSERTION", "externalRefs": [{ "referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:conan/openssl@1.0.2u" }], "licenseConcluded": "OpenSSL", "copyrightText": "NOASSERTION" },
+    { "SPDXID": "SPDXRef-log4j", "name": "log4j-core", "versionInfo": "2.14.1", "downloadLocation": "NOASSERTION", "externalRefs": [{ "referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1" }], "licenseConcluded": "Apache-2.0", "copyrightText": "NOASSERTION" },
+    { "SPDXID": "SPDXRef-lodash", "name": "lodash", "versionInfo": "4.17.4", "downloadLocation": "NOASSERTION", "externalRefs": [{ "referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:npm/lodash@4.17.4" }], "licenseConcluded": "MIT", "copyrightText": "NOASSERTION" },
+    { "SPDXID": "SPDXRef-pyyaml", "name": "PyYAML", "versionInfo": "3.13", "downloadLocation": "NOASSERTION", "externalRefs": [{ "referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:pypi/pyyaml@3.13" }], "licenseConcluded": "MIT", "copyrightText": "NOASSERTION" }
+  ],
+  "relationships": [
+    { "spdxElementId": "SPDXRef-DOCUMENT", "relationshipType": "DESCRIBES", "relatedSpdxElement": "SPDXRef-Package-root" },
+    { "spdxElementId": "SPDXRef-Package-root", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-openssl" },
+    { "spdxElementId": "SPDXRef-Package-root", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-log4j" },
+    { "spdxElementId": "SPDXRef-Package-root", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-lodash" },
+    { "spdxElementId": "SPDXRef-Package-root", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-pyyaml" }
+  ]
+}

@@ -1,0 +1,19 @@
+# Insecure Ansible fixture. Do not run.
+- name: tigergate insecure fixture
+  hosts: all
+  become: true
+  vars:
+    db_password: "otDzZxIZV0TxcDMdva6cZ4ld"   # hard-coded secret
+  tasks:
+    - name: world-writable app dir
+      ansible.builtin.file:
+        path: /opt/app
+        mode: "0777"                            # permissive mode
+        state: directory
+    - name: download installer over http
+      ansible.builtin.get_url:
+        url: http://example.com/install.sh      # cleartext transport
+        dest: /tmp/install.sh
+        validate_certs: no                      # TLS verification disabled
+    - name: run installer as root
+      ansible.builtin.shell: sh /tmp/install.sh  # use of shell + curl-to-shell

@@ -1,0 +1,26 @@
+# Insecure CloudFormation fixture for cfn scanners (cfn-lint / checkov / trivy).
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Deliberately insecure S3 + IAM fixture. Do not deploy.
+Resources:
+  PublicBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: tigergate-test-c-cfn-public
+      AccessControl: PublicReadWrite          # public bucket
+      # no BucketEncryption, no PublicAccessBlockConfiguration, no logging
+  AdminUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: tigergate-fixture-admin
+      Policies:
+        - PolicyName: AllowEverything
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: "*"
+                Resource: "*"
+  AccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName: !Ref AdminUser

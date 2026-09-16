@@ -1,3 +1,22 @@
+# Insecure compose fixture: privileged, host networking, docker socket mount,
+# hard-coded secrets, no resource limits.
 services:
   app:
     build: .
+    privileged: true
+    network_mode: host
+    environment:
+      - DATABASE_PASSWORD=otDzZxIZV0TxcDMdva6cZ4ld
+      - JWT_SECRET=A4MIEKNklMHF8nphXxxHdyKFcDt_gpUdNX6yaJ8As7H1mPmJthZsT_AOqWcN7RYr
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /:/host
+    cap_add:
+      - ALL
+
+  db:
+    image: postgres:12.1
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"

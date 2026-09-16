@@ -1,0 +1,17 @@
+{
+  "name": "tigergate-test-c",
+  "version": "0.2.0",
+  "description": "Security-test fixture: intentionally vulnerable dependencies.",
+  "private": true,
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "lodash": "4.17.4",
+    "minimist": "1.2.0",
+    "axios": "0.18.0",
+    "express": "4.16.0",
+    "jsonwebtoken": "0.4.0",
+    "handlebars": "4.0.11",
+    "node-fetch": "2.6.0",
+    "moment": "2.19.3"
+  }
+}

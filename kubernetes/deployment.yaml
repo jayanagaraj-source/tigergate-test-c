@@ -1,7 +1,9 @@
+# Deliberately insecure Kubernetes fixtures for IaC/manifest scanners.
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tigergate-test-c
+  labels: { app: tigergate-test-c }
 spec:
   replicas: 1
   selector:
@@ -10,13 +12,54 @@ spec:
     metadata:
       labels: { app: tigergate-test-c }
     spec:
-      hostNetwork: true # Deliberately insecure IaC fixture.
+      hostNetwork: true      # CKV_K8S_19
+      hostPID: true          # CKV_K8S_17
+      hostIPC: true          # CKV_K8S_18
+      automountServiceAccountToken: true
       containers:
         - name: app
-          image: tigergate-test-c:latest
+          image: tigergate-test-c:latest   # CKV_K8S_43: :latest tag
           securityContext:
-            privileged: true
+            privileged: true               # CKV_K8S_16
+            runAsNonRoot: false            # CKV_K8S_23
             runAsUser: 0
+            allowPrivilegeEscalation: true # CKV_K8S_20
+            readOnlyRootFilesystem: false  # CKV_K8S_22
+            capabilities:
+              add: ["SYS_ADMIN", "NET_ADMIN"]
+          # No resource limits (CKV_K8S_10/11/12/13), no probes (CKV_K8S_8/9)
           env:
             - name: DATABASE_PASSWORD
-              value: "fixture-password-not-real"
+              value: "otDzZxIZV0TxcDMdva6cZ4ld"   # secret in plaintext
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "2RGW9oG7BEwcswP0G9DMm88yREgec+bZ4ay0Dim0"
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - name: host-root
+              mountPath: /host
+      volumes:
+        - name: host-root
+          hostPath:            # CKV_K8S_27: hostPath mount of /
+            path: /
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tigergate-test-c
+spec:
+  type: LoadBalancer
+  selector: { app: tigergate-test-c }
+  ports:
+    - port: 80
+      targetPort: 3000
+---
+# Overly-permissive RBAC (CKV_K8S: wildcard verbs/resources)
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: tigergate-admin
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]

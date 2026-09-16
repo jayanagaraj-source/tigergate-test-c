@@ -1,8 +1,11 @@
-name: Test
+name: Build & Test
 on: [push, pull_request]
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "Add c test command here"
+      - name: Build
+        run: make all
+      - name: Unit tests
+        run: make test
