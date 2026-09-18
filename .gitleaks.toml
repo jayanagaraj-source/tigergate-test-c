@@ -1,7 +1,4 @@
 title = "tigergate-test-c gitleaks config"
-# Uses the default ruleset; this file just documents that findings here are
-# intentional fixtures and marks nothing as allowlisted.
-[allowlist]
-description = "No allowlist: every secret in this repo should be reported."
-regexes = []
-paths = []
+# Extend the built-in ruleset; nothing is allowlisted.
+[extend]
+useDefault = true
