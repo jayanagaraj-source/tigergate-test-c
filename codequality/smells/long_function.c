@@ -1,8 +1,8 @@
 /* RULE: long-function | lang: c
- * A long function (>80 lines) built from structurally diverse statements —
- * declarations, array ops, calls, bitwise, arithmetic, string formatting — so
- * a clone detector has no repeating block to match. Decision points are kept
- * low (one loop + a few ternaries) so it does NOT trip the complexity rules.
+ * A deliberately long function (~160 lines) built from structurally diverse
+ * statements — declarations, loops, array ops, calls, bitwise, arithmetic,
+ * string formatting — so a clone detector has no repeating block to match.
+ * Decision points are kept modest so it does NOT trip the complexity rules.
  */
 #include <string.h>
 #include <stdio.h>
@@ -17,9 +17,12 @@ int long_function(const int *in, int n, char *out, int out_sz) {
     int hi = -2147483648;
     int checksum = 0x9e3779b9;
     int buckets[10] = {0};
-    char scratch[96];
+    int ledger[16];
+    char scratch[160];
     int written = 0;
     int prev = 0;
+
+    memset(ledger, 0, sizeof ledger);
 
     for (int i = 0; i < n; i++) {
         int v = in[i];
@@ -29,6 +32,7 @@ int long_function(const int *in, int n, char *out, int out_sz) {
         hi = v > hi ? v : hi;
         buckets[(v % 10 + 10) % 10]++;
         checksum ^= (v << (i % 7)) + prev;
+        ledger[i & 15] += v - prev;
         prev = v;
     }
 
@@ -78,6 +82,13 @@ int long_function(const int *in, int n, char *out, int out_sz) {
     acc ^= buckets[5] << 4;
     written += snprintf(scratch + written, sizeof scratch - written, ";r=%ld", ratio);
 
+    int rolling = checksum;
+    for (int j = 0; j < 16; j++) {
+        rolling = (rolling * 31) + ledger[j];
+        rolling ^= rolling >> 11;
+        buckets[j % 10] += rolling & 3;
+    }
+
     int phase = helper_scale(acc, 2) + (acc & 1);
     acc += phase - lo;
     buckets[6] = (phase ^ gain) & 0xff;
@@ -89,20 +100,47 @@ int long_function(const int *in, int n, char *out, int out_sz) {
     acc += checksum & 0x0f;
     acc ^= span << 2;
 
+    int weave = rolling + acc;
+    weave = helper_scale(weave, 4);
+    weave -= ledger[3] * 2;
+    weave |= buckets[7] << 3;
+    weave ^= (gain & 0x1ff);
+    written += snprintf(scratch + written, sizeof scratch - written, ";w=%d", weave);
+    buckets[8] = weave % 100;
+    acc += weave - buckets[8];
+    acc = (acc >> 1) + (acc & 1);
+
     int tail = acc + evens - odds + span;
     tail = helper_scale(tail, 6);
     tail |= buckets[7];
     tail -= gain / 2;
-    buckets[8] = tail % 128;
+    buckets[9] = tail % 128;
     acc += tail;
-    buckets[9] = (buckets[8] + acc) & 0xff;
     acc = acc ^ buckets[9] ^ checksum;
     written += snprintf(scratch + written, sizeof scratch - written, ";t=%d", tail);
+
+    int digest = 0;
+    for (int k = 0; k < 10; k++) {
+        digest += buckets[k] * (k + 1);
+        digest ^= digest << 2;
+    }
+    acc += digest - rolling;
+    acc *= 2;
+    acc -= weave;
+    acc ^= digest << 1;
+    acc += helper_mix(digest, weave, tail);
+    written += snprintf(scratch + written, sizeof scratch - written, ";d=%d", digest);
+
+    int final = acc + sum + span + checksum + digest;
+    final = helper_scale(final, 1);
+    final ^= rolling;
+    final -= evens - odds;
+    final += buckets[0] - buckets[9];
 
     if (out && out_sz > 0) {
         int copy = written < out_sz - 1 ? written : out_sz - 1;
         memcpy(out, scratch, copy);
         out[copy] = '\0';
     }
-    return acc + sum + span + checksum;
+    return final;
 }
