@@ -1,6 +1,9 @@
-// RULE: console-debug (INFO) | lang: javascript
-function handle(x){
-  console.log("debug", x);   // debug console statement
-  console.debug("trace", x); // debug console statement
+// RULE: console-debug | lang: javascript
+function handle(x) {
+  console.log("debug", x);
+  console.debug("trace", x);
+  console.info("info", x);
+  console.warn("warn", x);
+  console.trace("stack");
   return x;
 }

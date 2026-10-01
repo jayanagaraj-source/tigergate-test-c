@@ -1,5 +1,4 @@
-// RULE: empty-catch (MEDIUM) | lang: javascript
-function risky(){
-  try{ doThing(); }
-  catch(e){ /* empty catch: swallowed */ }
+// RULE: empty-catch | lang: javascript — truly empty catch
+function risky() {
+  try { doThing(); } catch (e) {}
 }

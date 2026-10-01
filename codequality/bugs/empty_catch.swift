@@ -1,5 +1,4 @@
-// RULE: empty-catch (MEDIUM) | lang: swift
-func risky(){
-    do { try doThing() }
-    catch { /* empty catch: swallowed */ }
+// RULE: empty-catch | lang: swift — empty catch
+func risky() {
+    do { try doThing() } catch {}
 }

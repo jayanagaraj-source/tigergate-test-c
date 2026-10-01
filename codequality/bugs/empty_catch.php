@@ -1,6 +1,6 @@
 <?php
-// RULE: empty-catch (MEDIUM) | lang: php
-function risky(){
-    try { doThing(); }
-    catch (Exception $e) { /* empty catch: swallowed */ }
+// RULE: empty-catch | lang: php — empty catch (specific + generic)
+function risky() {
+    try { doThing(); } catch (RuntimeException $e) {}
+    try { doThing(); } catch (Exception $e) {}
 }
