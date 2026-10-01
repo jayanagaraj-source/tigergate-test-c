@@ -1,403 +1,1193 @@
-/* RULE: file-too-long | lang: c (>300 lines) */
+/* RULE: file-too-long | lang: c | >1000 lines to clear any threshold */
 #include <stdio.h>
-int helper_000(int x) { return x + 0; }
-int helper_001(int x) { return x + 1; }
-int helper_002(int x) { return x + 2; }
-int helper_003(int x) { return x + 3; }
-int helper_004(int x) { return x + 4; }
-int helper_005(int x) { return x + 5; }
-int helper_006(int x) { return x + 6; }
-int helper_007(int x) { return x + 7; }
-int helper_008(int x) { return x + 8; }
-int helper_009(int x) { return x + 9; }
-int helper_010(int x) { return x + 10; }
-int helper_011(int x) { return x + 11; }
-int helper_012(int x) { return x + 12; }
-int helper_013(int x) { return x + 13; }
-int helper_014(int x) { return x + 14; }
-int helper_015(int x) { return x + 15; }
-int helper_016(int x) { return x + 16; }
-int helper_017(int x) { return x + 17; }
-int helper_018(int x) { return x + 18; }
-int helper_019(int x) { return x + 19; }
-int helper_020(int x) { return x + 20; }
-int helper_021(int x) { return x + 21; }
-int helper_022(int x) { return x + 22; }
-int helper_023(int x) { return x + 23; }
-int helper_024(int x) { return x + 24; }
-int helper_025(int x) { return x + 25; }
-int helper_026(int x) { return x + 26; }
-int helper_027(int x) { return x + 27; }
-int helper_028(int x) { return x + 28; }
-int helper_029(int x) { return x + 29; }
-int helper_030(int x) { return x + 30; }
-int helper_031(int x) { return x + 31; }
-int helper_032(int x) { return x + 32; }
-int helper_033(int x) { return x + 33; }
-int helper_034(int x) { return x + 34; }
-int helper_035(int x) { return x + 35; }
-int helper_036(int x) { return x + 36; }
-int helper_037(int x) { return x + 37; }
-int helper_038(int x) { return x + 38; }
-int helper_039(int x) { return x + 39; }
-int helper_040(int x) { return x + 40; }
-int helper_041(int x) { return x + 41; }
-int helper_042(int x) { return x + 42; }
-int helper_043(int x) { return x + 43; }
-int helper_044(int x) { return x + 44; }
-int helper_045(int x) { return x + 45; }
-int helper_046(int x) { return x + 46; }
-int helper_047(int x) { return x + 47; }
-int helper_048(int x) { return x + 48; }
-int helper_049(int x) { return x + 49; }
-int helper_050(int x) { return x + 50; }
-int helper_051(int x) { return x + 51; }
-int helper_052(int x) { return x + 52; }
-int helper_053(int x) { return x + 53; }
-int helper_054(int x) { return x + 54; }
-int helper_055(int x) { return x + 55; }
-int helper_056(int x) { return x + 56; }
-int helper_057(int x) { return x + 57; }
-int helper_058(int x) { return x + 58; }
-int helper_059(int x) { return x + 59; }
-int helper_060(int x) { return x + 60; }
-int helper_061(int x) { return x + 61; }
-int helper_062(int x) { return x + 62; }
-int helper_063(int x) { return x + 63; }
-int helper_064(int x) { return x + 64; }
-int helper_065(int x) { return x + 65; }
-int helper_066(int x) { return x + 66; }
-int helper_067(int x) { return x + 67; }
-int helper_068(int x) { return x + 68; }
-int helper_069(int x) { return x + 69; }
-int helper_070(int x) { return x + 70; }
-int helper_071(int x) { return x + 71; }
-int helper_072(int x) { return x + 72; }
-int helper_073(int x) { return x + 73; }
-int helper_074(int x) { return x + 74; }
-int helper_075(int x) { return x + 75; }
-int helper_076(int x) { return x + 76; }
-int helper_077(int x) { return x + 77; }
-int helper_078(int x) { return x + 78; }
-int helper_079(int x) { return x + 79; }
-int helper_080(int x) { return x + 80; }
-int helper_081(int x) { return x + 81; }
-int helper_082(int x) { return x + 82; }
-int helper_083(int x) { return x + 83; }
-int helper_084(int x) { return x + 84; }
-int helper_085(int x) { return x + 85; }
-int helper_086(int x) { return x + 86; }
-int helper_087(int x) { return x + 87; }
-int helper_088(int x) { return x + 88; }
-int helper_089(int x) { return x + 89; }
-int helper_090(int x) { return x + 90; }
-int helper_091(int x) { return x + 91; }
-int helper_092(int x) { return x + 92; }
-int helper_093(int x) { return x + 93; }
-int helper_094(int x) { return x + 94; }
-int helper_095(int x) { return x + 95; }
-int helper_096(int x) { return x + 96; }
-int helper_097(int x) { return x + 97; }
-int helper_098(int x) { return x + 98; }
-int helper_099(int x) { return x + 99; }
-int helper_100(int x) { return x + 100; }
-int helper_101(int x) { return x + 101; }
-int helper_102(int x) { return x + 102; }
-int helper_103(int x) { return x + 103; }
-int helper_104(int x) { return x + 104; }
-int helper_105(int x) { return x + 105; }
-int helper_106(int x) { return x + 106; }
-int helper_107(int x) { return x + 107; }
-int helper_108(int x) { return x + 108; }
-int helper_109(int x) { return x + 109; }
-int helper_110(int x) { return x + 110; }
-int helper_111(int x) { return x + 111; }
-int helper_112(int x) { return x + 112; }
-int helper_113(int x) { return x + 113; }
-int helper_114(int x) { return x + 114; }
-int helper_115(int x) { return x + 115; }
-int helper_116(int x) { return x + 116; }
-int helper_117(int x) { return x + 117; }
-int helper_118(int x) { return x + 118; }
-int helper_119(int x) { return x + 119; }
-int helper_120(int x) { return x + 120; }
-int helper_121(int x) { return x + 121; }
-int helper_122(int x) { return x + 122; }
-int helper_123(int x) { return x + 123; }
-int helper_124(int x) { return x + 124; }
-int helper_125(int x) { return x + 125; }
-int helper_126(int x) { return x + 126; }
-int helper_127(int x) { return x + 127; }
-int helper_128(int x) { return x + 128; }
-int helper_129(int x) { return x + 129; }
-int helper_130(int x) { return x + 130; }
-int helper_131(int x) { return x + 131; }
-int helper_132(int x) { return x + 132; }
-int helper_133(int x) { return x + 133; }
-int helper_134(int x) { return x + 134; }
-int helper_135(int x) { return x + 135; }
-int helper_136(int x) { return x + 136; }
-int helper_137(int x) { return x + 137; }
-int helper_138(int x) { return x + 138; }
-int helper_139(int x) { return x + 139; }
-int helper_140(int x) { return x + 140; }
-int helper_141(int x) { return x + 141; }
-int helper_142(int x) { return x + 142; }
-int helper_143(int x) { return x + 143; }
-int helper_144(int x) { return x + 144; }
-int helper_145(int x) { return x + 145; }
-int helper_146(int x) { return x + 146; }
-int helper_147(int x) { return x + 147; }
-int helper_148(int x) { return x + 148; }
-int helper_149(int x) { return x + 149; }
-int helper_150(int x) { return x + 150; }
-int helper_151(int x) { return x + 151; }
-int helper_152(int x) { return x + 152; }
-int helper_153(int x) { return x + 153; }
-int helper_154(int x) { return x + 154; }
-int helper_155(int x) { return x + 155; }
-int helper_156(int x) { return x + 156; }
-int helper_157(int x) { return x + 157; }
-int helper_158(int x) { return x + 158; }
-int helper_159(int x) { return x + 159; }
-int helper_160(int x) { return x + 160; }
-int helper_161(int x) { return x + 161; }
-int helper_162(int x) { return x + 162; }
-int helper_163(int x) { return x + 163; }
-int helper_164(int x) { return x + 164; }
-int helper_165(int x) { return x + 165; }
-int helper_166(int x) { return x + 166; }
-int helper_167(int x) { return x + 167; }
-int helper_168(int x) { return x + 168; }
-int helper_169(int x) { return x + 169; }
-int helper_170(int x) { return x + 170; }
-int helper_171(int x) { return x + 171; }
-int helper_172(int x) { return x + 172; }
-int helper_173(int x) { return x + 173; }
-int helper_174(int x) { return x + 174; }
-int helper_175(int x) { return x + 175; }
-int helper_176(int x) { return x + 176; }
-int helper_177(int x) { return x + 177; }
-int helper_178(int x) { return x + 178; }
-int helper_179(int x) { return x + 179; }
-int helper_180(int x) { return x + 180; }
-int helper_181(int x) { return x + 181; }
-int helper_182(int x) { return x + 182; }
-int helper_183(int x) { return x + 183; }
-int helper_184(int x) { return x + 184; }
-int helper_185(int x) { return x + 185; }
-int helper_186(int x) { return x + 186; }
-int helper_187(int x) { return x + 187; }
-int helper_188(int x) { return x + 188; }
-int helper_189(int x) { return x + 189; }
-int helper_190(int x) { return x + 190; }
-int helper_191(int x) { return x + 191; }
-int helper_192(int x) { return x + 192; }
-int helper_193(int x) { return x + 193; }
-int helper_194(int x) { return x + 194; }
-int helper_195(int x) { return x + 195; }
-int helper_196(int x) { return x + 196; }
-int helper_197(int x) { return x + 197; }
-int helper_198(int x) { return x + 198; }
-int helper_199(int x) { return x + 199; }
-int helper_200(int x) { return x + 200; }
-int helper_201(int x) { return x + 201; }
-int helper_202(int x) { return x + 202; }
-int helper_203(int x) { return x + 203; }
-int helper_204(int x) { return x + 204; }
-int helper_205(int x) { return x + 205; }
-int helper_206(int x) { return x + 206; }
-int helper_207(int x) { return x + 207; }
-int helper_208(int x) { return x + 208; }
-int helper_209(int x) { return x + 209; }
-int helper_210(int x) { return x + 210; }
-int helper_211(int x) { return x + 211; }
-int helper_212(int x) { return x + 212; }
-int helper_213(int x) { return x + 213; }
-int helper_214(int x) { return x + 214; }
-int helper_215(int x) { return x + 215; }
-int helper_216(int x) { return x + 216; }
-int helper_217(int x) { return x + 217; }
-int helper_218(int x) { return x + 218; }
-int helper_219(int x) { return x + 219; }
-int helper_220(int x) { return x + 220; }
-int helper_221(int x) { return x + 221; }
-int helper_222(int x) { return x + 222; }
-int helper_223(int x) { return x + 223; }
-int helper_224(int x) { return x + 224; }
-int helper_225(int x) { return x + 225; }
-int helper_226(int x) { return x + 226; }
-int helper_227(int x) { return x + 227; }
-int helper_228(int x) { return x + 228; }
-int helper_229(int x) { return x + 229; }
-int helper_230(int x) { return x + 230; }
-int helper_231(int x) { return x + 231; }
-int helper_232(int x) { return x + 232; }
-int helper_233(int x) { return x + 233; }
-int helper_234(int x) { return x + 234; }
-int helper_235(int x) { return x + 235; }
-int helper_236(int x) { return x + 236; }
-int helper_237(int x) { return x + 237; }
-int helper_238(int x) { return x + 238; }
-int helper_239(int x) { return x + 239; }
-int helper_240(int x) { return x + 240; }
-int helper_241(int x) { return x + 241; }
-int helper_242(int x) { return x + 242; }
-int helper_243(int x) { return x + 243; }
-int helper_244(int x) { return x + 244; }
-int helper_245(int x) { return x + 245; }
-int helper_246(int x) { return x + 246; }
-int helper_247(int x) { return x + 247; }
-int helper_248(int x) { return x + 248; }
-int helper_249(int x) { return x + 249; }
-int helper_250(int x) { return x + 250; }
-int helper_251(int x) { return x + 251; }
-int helper_252(int x) { return x + 252; }
-int helper_253(int x) { return x + 253; }
-int helper_254(int x) { return x + 254; }
-int helper_255(int x) { return x + 255; }
-int helper_256(int x) { return x + 256; }
-int helper_257(int x) { return x + 257; }
-int helper_258(int x) { return x + 258; }
-int helper_259(int x) { return x + 259; }
-int helper_260(int x) { return x + 260; }
-int helper_261(int x) { return x + 261; }
-int helper_262(int x) { return x + 262; }
-int helper_263(int x) { return x + 263; }
-int helper_264(int x) { return x + 264; }
-int helper_265(int x) { return x + 265; }
-int helper_266(int x) { return x + 266; }
-int helper_267(int x) { return x + 267; }
-int helper_268(int x) { return x + 268; }
-int helper_269(int x) { return x + 269; }
-int helper_270(int x) { return x + 270; }
-int helper_271(int x) { return x + 271; }
-int helper_272(int x) { return x + 272; }
-int helper_273(int x) { return x + 273; }
-int helper_274(int x) { return x + 274; }
-int helper_275(int x) { return x + 275; }
-int helper_276(int x) { return x + 276; }
-int helper_277(int x) { return x + 277; }
-int helper_278(int x) { return x + 278; }
-int helper_279(int x) { return x + 279; }
-int helper_280(int x) { return x + 280; }
-int helper_281(int x) { return x + 281; }
-int helper_282(int x) { return x + 282; }
-int helper_283(int x) { return x + 283; }
-int helper_284(int x) { return x + 284; }
-int helper_285(int x) { return x + 285; }
-int helper_286(int x) { return x + 286; }
-int helper_287(int x) { return x + 287; }
-int helper_288(int x) { return x + 288; }
-int helper_289(int x) { return x + 289; }
-int helper_290(int x) { return x + 290; }
-int helper_291(int x) { return x + 291; }
-int helper_292(int x) { return x + 292; }
-int helper_293(int x) { return x + 293; }
-int helper_294(int x) { return x + 294; }
-int helper_295(int x) { return x + 295; }
-int helper_296(int x) { return x + 296; }
-int helper_297(int x) { return x + 297; }
-int helper_298(int x) { return x + 298; }
-int helper_299(int x) { return x + 299; }
-int helper_300(int x) { return x + 300; }
-int helper_301(int x) { return x + 301; }
-int helper_302(int x) { return x + 302; }
-int helper_303(int x) { return x + 303; }
-int helper_304(int x) { return x + 304; }
-int helper_305(int x) { return x + 305; }
-int helper_306(int x) { return x + 306; }
-int helper_307(int x) { return x + 307; }
-int helper_308(int x) { return x + 308; }
-int helper_309(int x) { return x + 309; }
-int helper_310(int x) { return x + 310; }
-int helper_311(int x) { return x + 311; }
-int helper_312(int x) { return x + 312; }
-int helper_313(int x) { return x + 313; }
-int helper_314(int x) { return x + 314; }
-int helper_315(int x) { return x + 315; }
-int helper_316(int x) { return x + 316; }
-int helper_317(int x) { return x + 317; }
-int helper_318(int x) { return x + 318; }
-int helper_319(int x) { return x + 319; }
-int helper_320(int x) { return x + 320; }
-int helper_321(int x) { return x + 321; }
-int helper_322(int x) { return x + 322; }
-int helper_323(int x) { return x + 323; }
-int helper_324(int x) { return x + 324; }
-int helper_325(int x) { return x + 325; }
-int helper_326(int x) { return x + 326; }
-int helper_327(int x) { return x + 327; }
-int helper_328(int x) { return x + 328; }
-int helper_329(int x) { return x + 329; }
-int helper_330(int x) { return x + 330; }
-int helper_331(int x) { return x + 331; }
-int helper_332(int x) { return x + 332; }
-int helper_333(int x) { return x + 333; }
-int helper_334(int x) { return x + 334; }
-int helper_335(int x) { return x + 335; }
-int helper_336(int x) { return x + 336; }
-int helper_337(int x) { return x + 337; }
-int helper_338(int x) { return x + 338; }
-int helper_339(int x) { return x + 339; }
-int helper_340(int x) { return x + 340; }
-int helper_341(int x) { return x + 341; }
-int helper_342(int x) { return x + 342; }
-int helper_343(int x) { return x + 343; }
-int helper_344(int x) { return x + 344; }
-int helper_345(int x) { return x + 345; }
-int helper_346(int x) { return x + 346; }
-int helper_347(int x) { return x + 347; }
-int helper_348(int x) { return x + 348; }
-int helper_349(int x) { return x + 349; }
-int helper_350(int x) { return x + 350; }
-int helper_351(int x) { return x + 351; }
-int helper_352(int x) { return x + 352; }
-int helper_353(int x) { return x + 353; }
-int helper_354(int x) { return x + 354; }
-int helper_355(int x) { return x + 355; }
-int helper_356(int x) { return x + 356; }
-int helper_357(int x) { return x + 357; }
-int helper_358(int x) { return x + 358; }
-int helper_359(int x) { return x + 359; }
-int helper_360(int x) { return x + 360; }
-int helper_361(int x) { return x + 361; }
-int helper_362(int x) { return x + 362; }
-int helper_363(int x) { return x + 363; }
-int helper_364(int x) { return x + 364; }
-int helper_365(int x) { return x + 365; }
-int helper_366(int x) { return x + 366; }
-int helper_367(int x) { return x + 367; }
-int helper_368(int x) { return x + 368; }
-int helper_369(int x) { return x + 369; }
-int helper_370(int x) { return x + 370; }
-int helper_371(int x) { return x + 371; }
-int helper_372(int x) { return x + 372; }
-int helper_373(int x) { return x + 373; }
-int helper_374(int x) { return x + 374; }
-int helper_375(int x) { return x + 375; }
-int helper_376(int x) { return x + 376; }
-int helper_377(int x) { return x + 377; }
-int helper_378(int x) { return x + 378; }
-int helper_379(int x) { return x + 379; }
-int helper_380(int x) { return x + 380; }
-int helper_381(int x) { return x + 381; }
-int helper_382(int x) { return x + 382; }
-int helper_383(int x) { return x + 383; }
-int helper_384(int x) { return x + 384; }
-int helper_385(int x) { return x + 385; }
-int helper_386(int x) { return x + 386; }
-int helper_387(int x) { return x + 387; }
-int helper_388(int x) { return x + 388; }
-int helper_389(int x) { return x + 389; }
-int helper_390(int x) { return x + 390; }
-int helper_391(int x) { return x + 391; }
-int helper_392(int x) { return x + 392; }
-int helper_393(int x) { return x + 393; }
-int helper_394(int x) { return x + 394; }
-int helper_395(int x) { return x + 395; }
-int helper_396(int x) { return x + 396; }
-int helper_397(int x) { return x + 397; }
-int helper_398(int x) { return x + 398; }
-int helper_399(int x) { return x + 399; }
-int file_too_long_entry(void) { return helper_000(1); }
+int helper_0000(int x) { return x * 1 + 0; }
+int helper_0001(int x) { return x * 2 + 1; }
+int helper_0002(int x) { return x * 3 + 2; }
+int helper_0003(int x) { return x * 4 + 3; }
+int helper_0004(int x) { return x * 5 + 4; }
+int helper_0005(int x) { return x * 6 + 5; }
+int helper_0006(int x) { return x * 7 + 6; }
+int helper_0007(int x) { return x * 8 + 7; }
+int helper_0008(int x) { return x * 9 + 8; }
+int helper_0009(int x) { return x * 10 + 9; }
+int helper_0010(int x) { return x * 11 + 10; }
+int helper_0011(int x) { return x * 12 + 11; }
+int helper_0012(int x) { return x * 13 + 12; }
+int helper_0013(int x) { return x * 14 + 13; }
+int helper_0014(int x) { return x * 15 + 14; }
+int helper_0015(int x) { return x * 16 + 15; }
+int helper_0016(int x) { return x * 17 + 16; }
+int helper_0017(int x) { return x * 18 + 17; }
+int helper_0018(int x) { return x * 19 + 18; }
+int helper_0019(int x) { return x * 20 + 19; }
+int helper_0020(int x) { return x * 21 + 20; }
+int helper_0021(int x) { return x * 22 + 21; }
+int helper_0022(int x) { return x * 23 + 22; }
+int helper_0023(int x) { return x * 24 + 23; }
+int helper_0024(int x) { return x * 25 + 24; }
+int helper_0025(int x) { return x * 26 + 25; }
+int helper_0026(int x) { return x * 27 + 26; }
+int helper_0027(int x) { return x * 28 + 27; }
+int helper_0028(int x) { return x * 29 + 28; }
+int helper_0029(int x) { return x * 30 + 29; }
+int helper_0030(int x) { return x * 31 + 30; }
+int helper_0031(int x) { return x * 32 + 31; }
+int helper_0032(int x) { return x * 33 + 32; }
+int helper_0033(int x) { return x * 34 + 33; }
+int helper_0034(int x) { return x * 35 + 34; }
+int helper_0035(int x) { return x * 36 + 35; }
+int helper_0036(int x) { return x * 37 + 36; }
+int helper_0037(int x) { return x * 38 + 37; }
+int helper_0038(int x) { return x * 39 + 38; }
+int helper_0039(int x) { return x * 40 + 39; }
+int helper_0040(int x) { return x * 41 + 40; }
+int helper_0041(int x) { return x * 42 + 41; }
+int helper_0042(int x) { return x * 43 + 42; }
+int helper_0043(int x) { return x * 44 + 43; }
+int helper_0044(int x) { return x * 45 + 44; }
+int helper_0045(int x) { return x * 46 + 45; }
+int helper_0046(int x) { return x * 47 + 46; }
+int helper_0047(int x) { return x * 48 + 47; }
+int helper_0048(int x) { return x * 49 + 48; }
+int helper_0049(int x) { return x * 50 + 49; }
+int helper_0050(int x) { return x * 51 + 50; }
+int helper_0051(int x) { return x * 52 + 51; }
+int helper_0052(int x) { return x * 53 + 52; }
+int helper_0053(int x) { return x * 54 + 53; }
+int helper_0054(int x) { return x * 55 + 54; }
+int helper_0055(int x) { return x * 56 + 55; }
+int helper_0056(int x) { return x * 57 + 56; }
+int helper_0057(int x) { return x * 58 + 57; }
+int helper_0058(int x) { return x * 59 + 58; }
+int helper_0059(int x) { return x * 60 + 59; }
+int helper_0060(int x) { return x * 61 + 60; }
+int helper_0061(int x) { return x * 62 + 61; }
+int helper_0062(int x) { return x * 63 + 62; }
+int helper_0063(int x) { return x * 64 + 63; }
+int helper_0064(int x) { return x * 65 + 64; }
+int helper_0065(int x) { return x * 66 + 65; }
+int helper_0066(int x) { return x * 67 + 66; }
+int helper_0067(int x) { return x * 68 + 67; }
+int helper_0068(int x) { return x * 69 + 68; }
+int helper_0069(int x) { return x * 70 + 69; }
+int helper_0070(int x) { return x * 71 + 70; }
+int helper_0071(int x) { return x * 72 + 71; }
+int helper_0072(int x) { return x * 73 + 72; }
+int helper_0073(int x) { return x * 74 + 73; }
+int helper_0074(int x) { return x * 75 + 74; }
+int helper_0075(int x) { return x * 76 + 75; }
+int helper_0076(int x) { return x * 77 + 76; }
+int helper_0077(int x) { return x * 78 + 77; }
+int helper_0078(int x) { return x * 79 + 78; }
+int helper_0079(int x) { return x * 80 + 79; }
+int helper_0080(int x) { return x * 81 + 80; }
+int helper_0081(int x) { return x * 82 + 81; }
+int helper_0082(int x) { return x * 83 + 82; }
+int helper_0083(int x) { return x * 84 + 83; }
+int helper_0084(int x) { return x * 85 + 84; }
+int helper_0085(int x) { return x * 86 + 85; }
+int helper_0086(int x) { return x * 87 + 86; }
+int helper_0087(int x) { return x * 88 + 87; }
+int helper_0088(int x) { return x * 89 + 88; }
+int helper_0089(int x) { return x * 90 + 89; }
+int helper_0090(int x) { return x * 91 + 90; }
+int helper_0091(int x) { return x * 92 + 91; }
+int helper_0092(int x) { return x * 93 + 92; }
+int helper_0093(int x) { return x * 94 + 93; }
+int helper_0094(int x) { return x * 95 + 94; }
+int helper_0095(int x) { return x * 96 + 95; }
+int helper_0096(int x) { return x * 97 + 96; }
+int helper_0097(int x) { return x * 98 + 97; }
+int helper_0098(int x) { return x * 99 + 98; }
+int helper_0099(int x) { return x * 100 + 99; }
+int helper_0100(int x) { return x * 101 + 100; }
+int helper_0101(int x) { return x * 102 + 101; }
+int helper_0102(int x) { return x * 103 + 102; }
+int helper_0103(int x) { return x * 104 + 103; }
+int helper_0104(int x) { return x * 105 + 104; }
+int helper_0105(int x) { return x * 106 + 105; }
+int helper_0106(int x) { return x * 107 + 106; }
+int helper_0107(int x) { return x * 108 + 107; }
+int helper_0108(int x) { return x * 109 + 108; }
+int helper_0109(int x) { return x * 110 + 109; }
+int helper_0110(int x) { return x * 111 + 110; }
+int helper_0111(int x) { return x * 112 + 111; }
+int helper_0112(int x) { return x * 113 + 112; }
+int helper_0113(int x) { return x * 114 + 113; }
+int helper_0114(int x) { return x * 115 + 114; }
+int helper_0115(int x) { return x * 116 + 115; }
+int helper_0116(int x) { return x * 117 + 116; }
+int helper_0117(int x) { return x * 118 + 117; }
+int helper_0118(int x) { return x * 119 + 118; }
+int helper_0119(int x) { return x * 120 + 119; }
+int helper_0120(int x) { return x * 121 + 120; }
+int helper_0121(int x) { return x * 122 + 121; }
+int helper_0122(int x) { return x * 123 + 122; }
+int helper_0123(int x) { return x * 124 + 123; }
+int helper_0124(int x) { return x * 125 + 124; }
+int helper_0125(int x) { return x * 126 + 125; }
+int helper_0126(int x) { return x * 127 + 126; }
+int helper_0127(int x) { return x * 128 + 127; }
+int helper_0128(int x) { return x * 129 + 128; }
+int helper_0129(int x) { return x * 130 + 129; }
+int helper_0130(int x) { return x * 131 + 130; }
+int helper_0131(int x) { return x * 132 + 131; }
+int helper_0132(int x) { return x * 133 + 132; }
+int helper_0133(int x) { return x * 134 + 133; }
+int helper_0134(int x) { return x * 135 + 134; }
+int helper_0135(int x) { return x * 136 + 135; }
+int helper_0136(int x) { return x * 137 + 136; }
+int helper_0137(int x) { return x * 138 + 137; }
+int helper_0138(int x) { return x * 139 + 138; }
+int helper_0139(int x) { return x * 140 + 139; }
+int helper_0140(int x) { return x * 141 + 140; }
+int helper_0141(int x) { return x * 142 + 141; }
+int helper_0142(int x) { return x * 143 + 142; }
+int helper_0143(int x) { return x * 144 + 143; }
+int helper_0144(int x) { return x * 145 + 144; }
+int helper_0145(int x) { return x * 146 + 145; }
+int helper_0146(int x) { return x * 147 + 146; }
+int helper_0147(int x) { return x * 148 + 147; }
+int helper_0148(int x) { return x * 149 + 148; }
+int helper_0149(int x) { return x * 150 + 149; }
+int helper_0150(int x) { return x * 151 + 150; }
+int helper_0151(int x) { return x * 152 + 151; }
+int helper_0152(int x) { return x * 153 + 152; }
+int helper_0153(int x) { return x * 154 + 153; }
+int helper_0154(int x) { return x * 155 + 154; }
+int helper_0155(int x) { return x * 156 + 155; }
+int helper_0156(int x) { return x * 157 + 156; }
+int helper_0157(int x) { return x * 158 + 157; }
+int helper_0158(int x) { return x * 159 + 158; }
+int helper_0159(int x) { return x * 160 + 159; }
+int helper_0160(int x) { return x * 161 + 160; }
+int helper_0161(int x) { return x * 162 + 161; }
+int helper_0162(int x) { return x * 163 + 162; }
+int helper_0163(int x) { return x * 164 + 163; }
+int helper_0164(int x) { return x * 165 + 164; }
+int helper_0165(int x) { return x * 166 + 165; }
+int helper_0166(int x) { return x * 167 + 166; }
+int helper_0167(int x) { return x * 168 + 167; }
+int helper_0168(int x) { return x * 169 + 168; }
+int helper_0169(int x) { return x * 170 + 169; }
+int helper_0170(int x) { return x * 171 + 170; }
+int helper_0171(int x) { return x * 172 + 171; }
+int helper_0172(int x) { return x * 173 + 172; }
+int helper_0173(int x) { return x * 174 + 173; }
+int helper_0174(int x) { return x * 175 + 174; }
+int helper_0175(int x) { return x * 176 + 175; }
+int helper_0176(int x) { return x * 177 + 176; }
+int helper_0177(int x) { return x * 178 + 177; }
+int helper_0178(int x) { return x * 179 + 178; }
+int helper_0179(int x) { return x * 180 + 179; }
+int helper_0180(int x) { return x * 181 + 180; }
+int helper_0181(int x) { return x * 182 + 181; }
+int helper_0182(int x) { return x * 183 + 182; }
+int helper_0183(int x) { return x * 184 + 183; }
+int helper_0184(int x) { return x * 185 + 184; }
+int helper_0185(int x) { return x * 186 + 185; }
+int helper_0186(int x) { return x * 187 + 186; }
+int helper_0187(int x) { return x * 188 + 187; }
+int helper_0188(int x) { return x * 189 + 188; }
+int helper_0189(int x) { return x * 190 + 189; }
+int helper_0190(int x) { return x * 191 + 190; }
+int helper_0191(int x) { return x * 192 + 191; }
+int helper_0192(int x) { return x * 193 + 192; }
+int helper_0193(int x) { return x * 194 + 193; }
+int helper_0194(int x) { return x * 195 + 194; }
+int helper_0195(int x) { return x * 196 + 195; }
+int helper_0196(int x) { return x * 197 + 196; }
+int helper_0197(int x) { return x * 198 + 197; }
+int helper_0198(int x) { return x * 199 + 198; }
+int helper_0199(int x) { return x * 200 + 199; }
+int helper_0200(int x) { return x * 201 + 200; }
+int helper_0201(int x) { return x * 202 + 201; }
+int helper_0202(int x) { return x * 203 + 202; }
+int helper_0203(int x) { return x * 204 + 203; }
+int helper_0204(int x) { return x * 205 + 204; }
+int helper_0205(int x) { return x * 206 + 205; }
+int helper_0206(int x) { return x * 207 + 206; }
+int helper_0207(int x) { return x * 208 + 207; }
+int helper_0208(int x) { return x * 209 + 208; }
+int helper_0209(int x) { return x * 210 + 209; }
+int helper_0210(int x) { return x * 211 + 210; }
+int helper_0211(int x) { return x * 212 + 211; }
+int helper_0212(int x) { return x * 213 + 212; }
+int helper_0213(int x) { return x * 214 + 213; }
+int helper_0214(int x) { return x * 215 + 214; }
+int helper_0215(int x) { return x * 216 + 215; }
+int helper_0216(int x) { return x * 217 + 216; }
+int helper_0217(int x) { return x * 218 + 217; }
+int helper_0218(int x) { return x * 219 + 218; }
+int helper_0219(int x) { return x * 220 + 219; }
+int helper_0220(int x) { return x * 221 + 220; }
+int helper_0221(int x) { return x * 222 + 221; }
+int helper_0222(int x) { return x * 223 + 222; }
+int helper_0223(int x) { return x * 224 + 223; }
+int helper_0224(int x) { return x * 225 + 224; }
+int helper_0225(int x) { return x * 226 + 225; }
+int helper_0226(int x) { return x * 227 + 226; }
+int helper_0227(int x) { return x * 228 + 227; }
+int helper_0228(int x) { return x * 229 + 228; }
+int helper_0229(int x) { return x * 230 + 229; }
+int helper_0230(int x) { return x * 231 + 230; }
+int helper_0231(int x) { return x * 232 + 231; }
+int helper_0232(int x) { return x * 233 + 232; }
+int helper_0233(int x) { return x * 234 + 233; }
+int helper_0234(int x) { return x * 235 + 234; }
+int helper_0235(int x) { return x * 236 + 235; }
+int helper_0236(int x) { return x * 237 + 236; }
+int helper_0237(int x) { return x * 238 + 237; }
+int helper_0238(int x) { return x * 239 + 238; }
+int helper_0239(int x) { return x * 240 + 239; }
+int helper_0240(int x) { return x * 241 + 240; }
+int helper_0241(int x) { return x * 242 + 241; }
+int helper_0242(int x) { return x * 243 + 242; }
+int helper_0243(int x) { return x * 244 + 243; }
+int helper_0244(int x) { return x * 245 + 244; }
+int helper_0245(int x) { return x * 246 + 245; }
+int helper_0246(int x) { return x * 247 + 246; }
+int helper_0247(int x) { return x * 248 + 247; }
+int helper_0248(int x) { return x * 249 + 248; }
+int helper_0249(int x) { return x * 250 + 249; }
+int helper_0250(int x) { return x * 251 + 250; }
+int helper_0251(int x) { return x * 252 + 251; }
+int helper_0252(int x) { return x * 253 + 252; }
+int helper_0253(int x) { return x * 254 + 253; }
+int helper_0254(int x) { return x * 255 + 254; }
+int helper_0255(int x) { return x * 256 + 255; }
+int helper_0256(int x) { return x * 257 + 256; }
+int helper_0257(int x) { return x * 258 + 257; }
+int helper_0258(int x) { return x * 259 + 258; }
+int helper_0259(int x) { return x * 260 + 259; }
+int helper_0260(int x) { return x * 261 + 260; }
+int helper_0261(int x) { return x * 262 + 261; }
+int helper_0262(int x) { return x * 263 + 262; }
+int helper_0263(int x) { return x * 264 + 263; }
+int helper_0264(int x) { return x * 265 + 264; }
+int helper_0265(int x) { return x * 266 + 265; }
+int helper_0266(int x) { return x * 267 + 266; }
+int helper_0267(int x) { return x * 268 + 267; }
+int helper_0268(int x) { return x * 269 + 268; }
+int helper_0269(int x) { return x * 270 + 269; }
+int helper_0270(int x) { return x * 271 + 270; }
+int helper_0271(int x) { return x * 272 + 271; }
+int helper_0272(int x) { return x * 273 + 272; }
+int helper_0273(int x) { return x * 274 + 273; }
+int helper_0274(int x) { return x * 275 + 274; }
+int helper_0275(int x) { return x * 276 + 275; }
+int helper_0276(int x) { return x * 277 + 276; }
+int helper_0277(int x) { return x * 278 + 277; }
+int helper_0278(int x) { return x * 279 + 278; }
+int helper_0279(int x) { return x * 280 + 279; }
+int helper_0280(int x) { return x * 281 + 280; }
+int helper_0281(int x) { return x * 282 + 281; }
+int helper_0282(int x) { return x * 283 + 282; }
+int helper_0283(int x) { return x * 284 + 283; }
+int helper_0284(int x) { return x * 285 + 284; }
+int helper_0285(int x) { return x * 286 + 285; }
+int helper_0286(int x) { return x * 287 + 286; }
+int helper_0287(int x) { return x * 288 + 287; }
+int helper_0288(int x) { return x * 289 + 288; }
+int helper_0289(int x) { return x * 290 + 289; }
+int helper_0290(int x) { return x * 291 + 290; }
+int helper_0291(int x) { return x * 292 + 291; }
+int helper_0292(int x) { return x * 293 + 292; }
+int helper_0293(int x) { return x * 294 + 293; }
+int helper_0294(int x) { return x * 295 + 294; }
+int helper_0295(int x) { return x * 296 + 295; }
+int helper_0296(int x) { return x * 297 + 296; }
+int helper_0297(int x) { return x * 298 + 297; }
+int helper_0298(int x) { return x * 299 + 298; }
+int helper_0299(int x) { return x * 300 + 299; }
+int helper_0300(int x) { return x * 301 + 300; }
+int helper_0301(int x) { return x * 302 + 301; }
+int helper_0302(int x) { return x * 303 + 302; }
+int helper_0303(int x) { return x * 304 + 303; }
+int helper_0304(int x) { return x * 305 + 304; }
+int helper_0305(int x) { return x * 306 + 305; }
+int helper_0306(int x) { return x * 307 + 306; }
+int helper_0307(int x) { return x * 308 + 307; }
+int helper_0308(int x) { return x * 309 + 308; }
+int helper_0309(int x) { return x * 310 + 309; }
+int helper_0310(int x) { return x * 311 + 310; }
+int helper_0311(int x) { return x * 312 + 311; }
+int helper_0312(int x) { return x * 313 + 312; }
+int helper_0313(int x) { return x * 314 + 313; }
+int helper_0314(int x) { return x * 315 + 314; }
+int helper_0315(int x) { return x * 316 + 315; }
+int helper_0316(int x) { return x * 317 + 316; }
+int helper_0317(int x) { return x * 318 + 317; }
+int helper_0318(int x) { return x * 319 + 318; }
+int helper_0319(int x) { return x * 320 + 319; }
+int helper_0320(int x) { return x * 321 + 320; }
+int helper_0321(int x) { return x * 322 + 321; }
+int helper_0322(int x) { return x * 323 + 322; }
+int helper_0323(int x) { return x * 324 + 323; }
+int helper_0324(int x) { return x * 325 + 324; }
+int helper_0325(int x) { return x * 326 + 325; }
+int helper_0326(int x) { return x * 327 + 326; }
+int helper_0327(int x) { return x * 328 + 327; }
+int helper_0328(int x) { return x * 329 + 328; }
+int helper_0329(int x) { return x * 330 + 329; }
+int helper_0330(int x) { return x * 331 + 330; }
+int helper_0331(int x) { return x * 332 + 331; }
+int helper_0332(int x) { return x * 333 + 332; }
+int helper_0333(int x) { return x * 334 + 333; }
+int helper_0334(int x) { return x * 335 + 334; }
+int helper_0335(int x) { return x * 336 + 335; }
+int helper_0336(int x) { return x * 337 + 336; }
+int helper_0337(int x) { return x * 338 + 337; }
+int helper_0338(int x) { return x * 339 + 338; }
+int helper_0339(int x) { return x * 340 + 339; }
+int helper_0340(int x) { return x * 341 + 340; }
+int helper_0341(int x) { return x * 342 + 341; }
+int helper_0342(int x) { return x * 343 + 342; }
+int helper_0343(int x) { return x * 344 + 343; }
+int helper_0344(int x) { return x * 345 + 344; }
+int helper_0345(int x) { return x * 346 + 345; }
+int helper_0346(int x) { return x * 347 + 346; }
+int helper_0347(int x) { return x * 348 + 347; }
+int helper_0348(int x) { return x * 349 + 348; }
+int helper_0349(int x) { return x * 350 + 349; }
+int helper_0350(int x) { return x * 351 + 350; }
+int helper_0351(int x) { return x * 352 + 351; }
+int helper_0352(int x) { return x * 353 + 352; }
+int helper_0353(int x) { return x * 354 + 353; }
+int helper_0354(int x) { return x * 355 + 354; }
+int helper_0355(int x) { return x * 356 + 355; }
+int helper_0356(int x) { return x * 357 + 356; }
+int helper_0357(int x) { return x * 358 + 357; }
+int helper_0358(int x) { return x * 359 + 358; }
+int helper_0359(int x) { return x * 360 + 359; }
+int helper_0360(int x) { return x * 361 + 360; }
+int helper_0361(int x) { return x * 362 + 361; }
+int helper_0362(int x) { return x * 363 + 362; }
+int helper_0363(int x) { return x * 364 + 363; }
+int helper_0364(int x) { return x * 365 + 364; }
+int helper_0365(int x) { return x * 366 + 365; }
+int helper_0366(int x) { return x * 367 + 366; }
+int helper_0367(int x) { return x * 368 + 367; }
+int helper_0368(int x) { return x * 369 + 368; }
+int helper_0369(int x) { return x * 370 + 369; }
+int helper_0370(int x) { return x * 371 + 370; }
+int helper_0371(int x) { return x * 372 + 371; }
+int helper_0372(int x) { return x * 373 + 372; }
+int helper_0373(int x) { return x * 374 + 373; }
+int helper_0374(int x) { return x * 375 + 374; }
+int helper_0375(int x) { return x * 376 + 375; }
+int helper_0376(int x) { return x * 377 + 376; }
+int helper_0377(int x) { return x * 378 + 377; }
+int helper_0378(int x) { return x * 379 + 378; }
+int helper_0379(int x) { return x * 380 + 379; }
+int helper_0380(int x) { return x * 381 + 380; }
+int helper_0381(int x) { return x * 382 + 381; }
+int helper_0382(int x) { return x * 383 + 382; }
+int helper_0383(int x) { return x * 384 + 383; }
+int helper_0384(int x) { return x * 385 + 384; }
+int helper_0385(int x) { return x * 386 + 385; }
+int helper_0386(int x) { return x * 387 + 386; }
+int helper_0387(int x) { return x * 388 + 387; }
+int helper_0388(int x) { return x * 389 + 388; }
+int helper_0389(int x) { return x * 390 + 389; }
+int helper_0390(int x) { return x * 391 + 390; }
+int helper_0391(int x) { return x * 392 + 391; }
+int helper_0392(int x) { return x * 393 + 392; }
+int helper_0393(int x) { return x * 394 + 393; }
+int helper_0394(int x) { return x * 395 + 394; }
+int helper_0395(int x) { return x * 396 + 395; }
+int helper_0396(int x) { return x * 397 + 396; }
+int helper_0397(int x) { return x * 398 + 397; }
+int helper_0398(int x) { return x * 399 + 398; }
+int helper_0399(int x) { return x * 400 + 399; }
+int helper_0400(int x) { return x * 401 + 400; }
+int helper_0401(int x) { return x * 402 + 401; }
+int helper_0402(int x) { return x * 403 + 402; }
+int helper_0403(int x) { return x * 404 + 403; }
+int helper_0404(int x) { return x * 405 + 404; }
+int helper_0405(int x) { return x * 406 + 405; }
+int helper_0406(int x) { return x * 407 + 406; }
+int helper_0407(int x) { return x * 408 + 407; }
+int helper_0408(int x) { return x * 409 + 408; }
+int helper_0409(int x) { return x * 410 + 409; }
+int helper_0410(int x) { return x * 411 + 410; }
+int helper_0411(int x) { return x * 412 + 411; }
+int helper_0412(int x) { return x * 413 + 412; }
+int helper_0413(int x) { return x * 414 + 413; }
+int helper_0414(int x) { return x * 415 + 414; }
+int helper_0415(int x) { return x * 416 + 415; }
+int helper_0416(int x) { return x * 417 + 416; }
+int helper_0417(int x) { return x * 418 + 417; }
+int helper_0418(int x) { return x * 419 + 418; }
+int helper_0419(int x) { return x * 420 + 419; }
+int helper_0420(int x) { return x * 421 + 420; }
+int helper_0421(int x) { return x * 422 + 421; }
+int helper_0422(int x) { return x * 423 + 422; }
+int helper_0423(int x) { return x * 424 + 423; }
+int helper_0424(int x) { return x * 425 + 424; }
+int helper_0425(int x) { return x * 426 + 425; }
+int helper_0426(int x) { return x * 427 + 426; }
+int helper_0427(int x) { return x * 428 + 427; }
+int helper_0428(int x) { return x * 429 + 428; }
+int helper_0429(int x) { return x * 430 + 429; }
+int helper_0430(int x) { return x * 431 + 430; }
+int helper_0431(int x) { return x * 432 + 431; }
+int helper_0432(int x) { return x * 433 + 432; }
+int helper_0433(int x) { return x * 434 + 433; }
+int helper_0434(int x) { return x * 435 + 434; }
+int helper_0435(int x) { return x * 436 + 435; }
+int helper_0436(int x) { return x * 437 + 436; }
+int helper_0437(int x) { return x * 438 + 437; }
+int helper_0438(int x) { return x * 439 + 438; }
+int helper_0439(int x) { return x * 440 + 439; }
+int helper_0440(int x) { return x * 441 + 440; }
+int helper_0441(int x) { return x * 442 + 441; }
+int helper_0442(int x) { return x * 443 + 442; }
+int helper_0443(int x) { return x * 444 + 443; }
+int helper_0444(int x) { return x * 445 + 444; }
+int helper_0445(int x) { return x * 446 + 445; }
+int helper_0446(int x) { return x * 447 + 446; }
+int helper_0447(int x) { return x * 448 + 447; }
+int helper_0448(int x) { return x * 449 + 448; }
+int helper_0449(int x) { return x * 450 + 449; }
+int helper_0450(int x) { return x * 451 + 450; }
+int helper_0451(int x) { return x * 452 + 451; }
+int helper_0452(int x) { return x * 453 + 452; }
+int helper_0453(int x) { return x * 454 + 453; }
+int helper_0454(int x) { return x * 455 + 454; }
+int helper_0455(int x) { return x * 456 + 455; }
+int helper_0456(int x) { return x * 457 + 456; }
+int helper_0457(int x) { return x * 458 + 457; }
+int helper_0458(int x) { return x * 459 + 458; }
+int helper_0459(int x) { return x * 460 + 459; }
+int helper_0460(int x) { return x * 461 + 460; }
+int helper_0461(int x) { return x * 462 + 461; }
+int helper_0462(int x) { return x * 463 + 462; }
+int helper_0463(int x) { return x * 464 + 463; }
+int helper_0464(int x) { return x * 465 + 464; }
+int helper_0465(int x) { return x * 466 + 465; }
+int helper_0466(int x) { return x * 467 + 466; }
+int helper_0467(int x) { return x * 468 + 467; }
+int helper_0468(int x) { return x * 469 + 468; }
+int helper_0469(int x) { return x * 470 + 469; }
+int helper_0470(int x) { return x * 471 + 470; }
+int helper_0471(int x) { return x * 472 + 471; }
+int helper_0472(int x) { return x * 473 + 472; }
+int helper_0473(int x) { return x * 474 + 473; }
+int helper_0474(int x) { return x * 475 + 474; }
+int helper_0475(int x) { return x * 476 + 475; }
+int helper_0476(int x) { return x * 477 + 476; }
+int helper_0477(int x) { return x * 478 + 477; }
+int helper_0478(int x) { return x * 479 + 478; }
+int helper_0479(int x) { return x * 480 + 479; }
+int helper_0480(int x) { return x * 481 + 480; }
+int helper_0481(int x) { return x * 482 + 481; }
+int helper_0482(int x) { return x * 483 + 482; }
+int helper_0483(int x) { return x * 484 + 483; }
+int helper_0484(int x) { return x * 485 + 484; }
+int helper_0485(int x) { return x * 486 + 485; }
+int helper_0486(int x) { return x * 487 + 486; }
+int helper_0487(int x) { return x * 488 + 487; }
+int helper_0488(int x) { return x * 489 + 488; }
+int helper_0489(int x) { return x * 490 + 489; }
+int helper_0490(int x) { return x * 491 + 490; }
+int helper_0491(int x) { return x * 492 + 491; }
+int helper_0492(int x) { return x * 493 + 492; }
+int helper_0493(int x) { return x * 494 + 493; }
+int helper_0494(int x) { return x * 495 + 494; }
+int helper_0495(int x) { return x * 496 + 495; }
+int helper_0496(int x) { return x * 497 + 496; }
+int helper_0497(int x) { return x * 498 + 497; }
+int helper_0498(int x) { return x * 499 + 498; }
+int helper_0499(int x) { return x * 500 + 499; }
+int helper_0500(int x) { return x * 501 + 500; }
+int helper_0501(int x) { return x * 502 + 501; }
+int helper_0502(int x) { return x * 503 + 502; }
+int helper_0503(int x) { return x * 504 + 503; }
+int helper_0504(int x) { return x * 505 + 504; }
+int helper_0505(int x) { return x * 506 + 505; }
+int helper_0506(int x) { return x * 507 + 506; }
+int helper_0507(int x) { return x * 508 + 507; }
+int helper_0508(int x) { return x * 509 + 508; }
+int helper_0509(int x) { return x * 510 + 509; }
+int helper_0510(int x) { return x * 511 + 510; }
+int helper_0511(int x) { return x * 512 + 511; }
+int helper_0512(int x) { return x * 513 + 512; }
+int helper_0513(int x) { return x * 514 + 513; }
+int helper_0514(int x) { return x * 515 + 514; }
+int helper_0515(int x) { return x * 516 + 515; }
+int helper_0516(int x) { return x * 517 + 516; }
+int helper_0517(int x) { return x * 518 + 517; }
+int helper_0518(int x) { return x * 519 + 518; }
+int helper_0519(int x) { return x * 520 + 519; }
+int helper_0520(int x) { return x * 521 + 520; }
+int helper_0521(int x) { return x * 522 + 521; }
+int helper_0522(int x) { return x * 523 + 522; }
+int helper_0523(int x) { return x * 524 + 523; }
+int helper_0524(int x) { return x * 525 + 524; }
+int helper_0525(int x) { return x * 526 + 525; }
+int helper_0526(int x) { return x * 527 + 526; }
+int helper_0527(int x) { return x * 528 + 527; }
+int helper_0528(int x) { return x * 529 + 528; }
+int helper_0529(int x) { return x * 530 + 529; }
+int helper_0530(int x) { return x * 531 + 530; }
+int helper_0531(int x) { return x * 532 + 531; }
+int helper_0532(int x) { return x * 533 + 532; }
+int helper_0533(int x) { return x * 534 + 533; }
+int helper_0534(int x) { return x * 535 + 534; }
+int helper_0535(int x) { return x * 536 + 535; }
+int helper_0536(int x) { return x * 537 + 536; }
+int helper_0537(int x) { return x * 538 + 537; }
+int helper_0538(int x) { return x * 539 + 538; }
+int helper_0539(int x) { return x * 540 + 539; }
+int helper_0540(int x) { return x * 541 + 540; }
+int helper_0541(int x) { return x * 542 + 541; }
+int helper_0542(int x) { return x * 543 + 542; }
+int helper_0543(int x) { return x * 544 + 543; }
+int helper_0544(int x) { return x * 545 + 544; }
+int helper_0545(int x) { return x * 546 + 545; }
+int helper_0546(int x) { return x * 547 + 546; }
+int helper_0547(int x) { return x * 548 + 547; }
+int helper_0548(int x) { return x * 549 + 548; }
+int helper_0549(int x) { return x * 550 + 549; }
+int helper_0550(int x) { return x * 551 + 550; }
+int helper_0551(int x) { return x * 552 + 551; }
+int helper_0552(int x) { return x * 553 + 552; }
+int helper_0553(int x) { return x * 554 + 553; }
+int helper_0554(int x) { return x * 555 + 554; }
+int helper_0555(int x) { return x * 556 + 555; }
+int helper_0556(int x) { return x * 557 + 556; }
+int helper_0557(int x) { return x * 558 + 557; }
+int helper_0558(int x) { return x * 559 + 558; }
+int helper_0559(int x) { return x * 560 + 559; }
+int helper_0560(int x) { return x * 561 + 560; }
+int helper_0561(int x) { return x * 562 + 561; }
+int helper_0562(int x) { return x * 563 + 562; }
+int helper_0563(int x) { return x * 564 + 563; }
+int helper_0564(int x) { return x * 565 + 564; }
+int helper_0565(int x) { return x * 566 + 565; }
+int helper_0566(int x) { return x * 567 + 566; }
+int helper_0567(int x) { return x * 568 + 567; }
+int helper_0568(int x) { return x * 569 + 568; }
+int helper_0569(int x) { return x * 570 + 569; }
+int helper_0570(int x) { return x * 571 + 570; }
+int helper_0571(int x) { return x * 572 + 571; }
+int helper_0572(int x) { return x * 573 + 572; }
+int helper_0573(int x) { return x * 574 + 573; }
+int helper_0574(int x) { return x * 575 + 574; }
+int helper_0575(int x) { return x * 576 + 575; }
+int helper_0576(int x) { return x * 577 + 576; }
+int helper_0577(int x) { return x * 578 + 577; }
+int helper_0578(int x) { return x * 579 + 578; }
+int helper_0579(int x) { return x * 580 + 579; }
+int helper_0580(int x) { return x * 581 + 580; }
+int helper_0581(int x) { return x * 582 + 581; }
+int helper_0582(int x) { return x * 583 + 582; }
+int helper_0583(int x) { return x * 584 + 583; }
+int helper_0584(int x) { return x * 585 + 584; }
+int helper_0585(int x) { return x * 586 + 585; }
+int helper_0586(int x) { return x * 587 + 586; }
+int helper_0587(int x) { return x * 588 + 587; }
+int helper_0588(int x) { return x * 589 + 588; }
+int helper_0589(int x) { return x * 590 + 589; }
+int helper_0590(int x) { return x * 591 + 590; }
+int helper_0591(int x) { return x * 592 + 591; }
+int helper_0592(int x) { return x * 593 + 592; }
+int helper_0593(int x) { return x * 594 + 593; }
+int helper_0594(int x) { return x * 595 + 594; }
+int helper_0595(int x) { return x * 596 + 595; }
+int helper_0596(int x) { return x * 597 + 596; }
+int helper_0597(int x) { return x * 598 + 597; }
+int helper_0598(int x) { return x * 599 + 598; }
+int helper_0599(int x) { return x * 600 + 599; }
+int helper_0600(int x) { return x * 601 + 600; }
+int helper_0601(int x) { return x * 602 + 601; }
+int helper_0602(int x) { return x * 603 + 602; }
+int helper_0603(int x) { return x * 604 + 603; }
+int helper_0604(int x) { return x * 605 + 604; }
+int helper_0605(int x) { return x * 606 + 605; }
+int helper_0606(int x) { return x * 607 + 606; }
+int helper_0607(int x) { return x * 608 + 607; }
+int helper_0608(int x) { return x * 609 + 608; }
+int helper_0609(int x) { return x * 610 + 609; }
+int helper_0610(int x) { return x * 611 + 610; }
+int helper_0611(int x) { return x * 612 + 611; }
+int helper_0612(int x) { return x * 613 + 612; }
+int helper_0613(int x) { return x * 614 + 613; }
+int helper_0614(int x) { return x * 615 + 614; }
+int helper_0615(int x) { return x * 616 + 615; }
+int helper_0616(int x) { return x * 617 + 616; }
+int helper_0617(int x) { return x * 618 + 617; }
+int helper_0618(int x) { return x * 619 + 618; }
+int helper_0619(int x) { return x * 620 + 619; }
+int helper_0620(int x) { return x * 621 + 620; }
+int helper_0621(int x) { return x * 622 + 621; }
+int helper_0622(int x) { return x * 623 + 622; }
+int helper_0623(int x) { return x * 624 + 623; }
+int helper_0624(int x) { return x * 625 + 624; }
+int helper_0625(int x) { return x * 626 + 625; }
+int helper_0626(int x) { return x * 627 + 626; }
+int helper_0627(int x) { return x * 628 + 627; }
+int helper_0628(int x) { return x * 629 + 628; }
+int helper_0629(int x) { return x * 630 + 629; }
+int helper_0630(int x) { return x * 631 + 630; }
+int helper_0631(int x) { return x * 632 + 631; }
+int helper_0632(int x) { return x * 633 + 632; }
+int helper_0633(int x) { return x * 634 + 633; }
+int helper_0634(int x) { return x * 635 + 634; }
+int helper_0635(int x) { return x * 636 + 635; }
+int helper_0636(int x) { return x * 637 + 636; }
+int helper_0637(int x) { return x * 638 + 637; }
+int helper_0638(int x) { return x * 639 + 638; }
+int helper_0639(int x) { return x * 640 + 639; }
+int helper_0640(int x) { return x * 641 + 640; }
+int helper_0641(int x) { return x * 642 + 641; }
+int helper_0642(int x) { return x * 643 + 642; }
+int helper_0643(int x) { return x * 644 + 643; }
+int helper_0644(int x) { return x * 645 + 644; }
+int helper_0645(int x) { return x * 646 + 645; }
+int helper_0646(int x) { return x * 647 + 646; }
+int helper_0647(int x) { return x * 648 + 647; }
+int helper_0648(int x) { return x * 649 + 648; }
+int helper_0649(int x) { return x * 650 + 649; }
+int helper_0650(int x) { return x * 651 + 650; }
+int helper_0651(int x) { return x * 652 + 651; }
+int helper_0652(int x) { return x * 653 + 652; }
+int helper_0653(int x) { return x * 654 + 653; }
+int helper_0654(int x) { return x * 655 + 654; }
+int helper_0655(int x) { return x * 656 + 655; }
+int helper_0656(int x) { return x * 657 + 656; }
+int helper_0657(int x) { return x * 658 + 657; }
+int helper_0658(int x) { return x * 659 + 658; }
+int helper_0659(int x) { return x * 660 + 659; }
+int helper_0660(int x) { return x * 661 + 660; }
+int helper_0661(int x) { return x * 662 + 661; }
+int helper_0662(int x) { return x * 663 + 662; }
+int helper_0663(int x) { return x * 664 + 663; }
+int helper_0664(int x) { return x * 665 + 664; }
+int helper_0665(int x) { return x * 666 + 665; }
+int helper_0666(int x) { return x * 667 + 666; }
+int helper_0667(int x) { return x * 668 + 667; }
+int helper_0668(int x) { return x * 669 + 668; }
+int helper_0669(int x) { return x * 670 + 669; }
+int helper_0670(int x) { return x * 671 + 670; }
+int helper_0671(int x) { return x * 672 + 671; }
+int helper_0672(int x) { return x * 673 + 672; }
+int helper_0673(int x) { return x * 674 + 673; }
+int helper_0674(int x) { return x * 675 + 674; }
+int helper_0675(int x) { return x * 676 + 675; }
+int helper_0676(int x) { return x * 677 + 676; }
+int helper_0677(int x) { return x * 678 + 677; }
+int helper_0678(int x) { return x * 679 + 678; }
+int helper_0679(int x) { return x * 680 + 679; }
+int helper_0680(int x) { return x * 681 + 680; }
+int helper_0681(int x) { return x * 682 + 681; }
+int helper_0682(int x) { return x * 683 + 682; }
+int helper_0683(int x) { return x * 684 + 683; }
+int helper_0684(int x) { return x * 685 + 684; }
+int helper_0685(int x) { return x * 686 + 685; }
+int helper_0686(int x) { return x * 687 + 686; }
+int helper_0687(int x) { return x * 688 + 687; }
+int helper_0688(int x) { return x * 689 + 688; }
+int helper_0689(int x) { return x * 690 + 689; }
+int helper_0690(int x) { return x * 691 + 690; }
+int helper_0691(int x) { return x * 692 + 691; }
+int helper_0692(int x) { return x * 693 + 692; }
+int helper_0693(int x) { return x * 694 + 693; }
+int helper_0694(int x) { return x * 695 + 694; }
+int helper_0695(int x) { return x * 696 + 695; }
+int helper_0696(int x) { return x * 697 + 696; }
+int helper_0697(int x) { return x * 698 + 697; }
+int helper_0698(int x) { return x * 699 + 698; }
+int helper_0699(int x) { return x * 700 + 699; }
+int helper_0700(int x) { return x * 701 + 700; }
+int helper_0701(int x) { return x * 702 + 701; }
+int helper_0702(int x) { return x * 703 + 702; }
+int helper_0703(int x) { return x * 704 + 703; }
+int helper_0704(int x) { return x * 705 + 704; }
+int helper_0705(int x) { return x * 706 + 705; }
+int helper_0706(int x) { return x * 707 + 706; }
+int helper_0707(int x) { return x * 708 + 707; }
+int helper_0708(int x) { return x * 709 + 708; }
+int helper_0709(int x) { return x * 710 + 709; }
+int helper_0710(int x) { return x * 711 + 710; }
+int helper_0711(int x) { return x * 712 + 711; }
+int helper_0712(int x) { return x * 713 + 712; }
+int helper_0713(int x) { return x * 714 + 713; }
+int helper_0714(int x) { return x * 715 + 714; }
+int helper_0715(int x) { return x * 716 + 715; }
+int helper_0716(int x) { return x * 717 + 716; }
+int helper_0717(int x) { return x * 718 + 717; }
+int helper_0718(int x) { return x * 719 + 718; }
+int helper_0719(int x) { return x * 720 + 719; }
+int helper_0720(int x) { return x * 721 + 720; }
+int helper_0721(int x) { return x * 722 + 721; }
+int helper_0722(int x) { return x * 723 + 722; }
+int helper_0723(int x) { return x * 724 + 723; }
+int helper_0724(int x) { return x * 725 + 724; }
+int helper_0725(int x) { return x * 726 + 725; }
+int helper_0726(int x) { return x * 727 + 726; }
+int helper_0727(int x) { return x * 728 + 727; }
+int helper_0728(int x) { return x * 729 + 728; }
+int helper_0729(int x) { return x * 730 + 729; }
+int helper_0730(int x) { return x * 731 + 730; }
+int helper_0731(int x) { return x * 732 + 731; }
+int helper_0732(int x) { return x * 733 + 732; }
+int helper_0733(int x) { return x * 734 + 733; }
+int helper_0734(int x) { return x * 735 + 734; }
+int helper_0735(int x) { return x * 736 + 735; }
+int helper_0736(int x) { return x * 737 + 736; }
+int helper_0737(int x) { return x * 738 + 737; }
+int helper_0738(int x) { return x * 739 + 738; }
+int helper_0739(int x) { return x * 740 + 739; }
+int helper_0740(int x) { return x * 741 + 740; }
+int helper_0741(int x) { return x * 742 + 741; }
+int helper_0742(int x) { return x * 743 + 742; }
+int helper_0743(int x) { return x * 744 + 743; }
+int helper_0744(int x) { return x * 745 + 744; }
+int helper_0745(int x) { return x * 746 + 745; }
+int helper_0746(int x) { return x * 747 + 746; }
+int helper_0747(int x) { return x * 748 + 747; }
+int helper_0748(int x) { return x * 749 + 748; }
+int helper_0749(int x) { return x * 750 + 749; }
+int helper_0750(int x) { return x * 751 + 750; }
+int helper_0751(int x) { return x * 752 + 751; }
+int helper_0752(int x) { return x * 753 + 752; }
+int helper_0753(int x) { return x * 754 + 753; }
+int helper_0754(int x) { return x * 755 + 754; }
+int helper_0755(int x) { return x * 756 + 755; }
+int helper_0756(int x) { return x * 757 + 756; }
+int helper_0757(int x) { return x * 758 + 757; }
+int helper_0758(int x) { return x * 759 + 758; }
+int helper_0759(int x) { return x * 760 + 759; }
+int helper_0760(int x) { return x * 761 + 760; }
+int helper_0761(int x) { return x * 762 + 761; }
+int helper_0762(int x) { return x * 763 + 762; }
+int helper_0763(int x) { return x * 764 + 763; }
+int helper_0764(int x) { return x * 765 + 764; }
+int helper_0765(int x) { return x * 766 + 765; }
+int helper_0766(int x) { return x * 767 + 766; }
+int helper_0767(int x) { return x * 768 + 767; }
+int helper_0768(int x) { return x * 769 + 768; }
+int helper_0769(int x) { return x * 770 + 769; }
+int helper_0770(int x) { return x * 771 + 770; }
+int helper_0771(int x) { return x * 772 + 771; }
+int helper_0772(int x) { return x * 773 + 772; }
+int helper_0773(int x) { return x * 774 + 773; }
+int helper_0774(int x) { return x * 775 + 774; }
+int helper_0775(int x) { return x * 776 + 775; }
+int helper_0776(int x) { return x * 777 + 776; }
+int helper_0777(int x) { return x * 778 + 777; }
+int helper_0778(int x) { return x * 779 + 778; }
+int helper_0779(int x) { return x * 780 + 779; }
+int helper_0780(int x) { return x * 781 + 780; }
+int helper_0781(int x) { return x * 782 + 781; }
+int helper_0782(int x) { return x * 783 + 782; }
+int helper_0783(int x) { return x * 784 + 783; }
+int helper_0784(int x) { return x * 785 + 784; }
+int helper_0785(int x) { return x * 786 + 785; }
+int helper_0786(int x) { return x * 787 + 786; }
+int helper_0787(int x) { return x * 788 + 787; }
+int helper_0788(int x) { return x * 789 + 788; }
+int helper_0789(int x) { return x * 790 + 789; }
+int helper_0790(int x) { return x * 791 + 790; }
+int helper_0791(int x) { return x * 792 + 791; }
+int helper_0792(int x) { return x * 793 + 792; }
+int helper_0793(int x) { return x * 794 + 793; }
+int helper_0794(int x) { return x * 795 + 794; }
+int helper_0795(int x) { return x * 796 + 795; }
+int helper_0796(int x) { return x * 797 + 796; }
+int helper_0797(int x) { return x * 798 + 797; }
+int helper_0798(int x) { return x * 799 + 798; }
+int helper_0799(int x) { return x * 800 + 799; }
+int helper_0800(int x) { return x * 801 + 800; }
+int helper_0801(int x) { return x * 802 + 801; }
+int helper_0802(int x) { return x * 803 + 802; }
+int helper_0803(int x) { return x * 804 + 803; }
+int helper_0804(int x) { return x * 805 + 804; }
+int helper_0805(int x) { return x * 806 + 805; }
+int helper_0806(int x) { return x * 807 + 806; }
+int helper_0807(int x) { return x * 808 + 807; }
+int helper_0808(int x) { return x * 809 + 808; }
+int helper_0809(int x) { return x * 810 + 809; }
+int helper_0810(int x) { return x * 811 + 810; }
+int helper_0811(int x) { return x * 812 + 811; }
+int helper_0812(int x) { return x * 813 + 812; }
+int helper_0813(int x) { return x * 814 + 813; }
+int helper_0814(int x) { return x * 815 + 814; }
+int helper_0815(int x) { return x * 816 + 815; }
+int helper_0816(int x) { return x * 817 + 816; }
+int helper_0817(int x) { return x * 818 + 817; }
+int helper_0818(int x) { return x * 819 + 818; }
+int helper_0819(int x) { return x * 820 + 819; }
+int helper_0820(int x) { return x * 821 + 820; }
+int helper_0821(int x) { return x * 822 + 821; }
+int helper_0822(int x) { return x * 823 + 822; }
+int helper_0823(int x) { return x * 824 + 823; }
+int helper_0824(int x) { return x * 825 + 824; }
+int helper_0825(int x) { return x * 826 + 825; }
+int helper_0826(int x) { return x * 827 + 826; }
+int helper_0827(int x) { return x * 828 + 827; }
+int helper_0828(int x) { return x * 829 + 828; }
+int helper_0829(int x) { return x * 830 + 829; }
+int helper_0830(int x) { return x * 831 + 830; }
+int helper_0831(int x) { return x * 832 + 831; }
+int helper_0832(int x) { return x * 833 + 832; }
+int helper_0833(int x) { return x * 834 + 833; }
+int helper_0834(int x) { return x * 835 + 834; }
+int helper_0835(int x) { return x * 836 + 835; }
+int helper_0836(int x) { return x * 837 + 836; }
+int helper_0837(int x) { return x * 838 + 837; }
+int helper_0838(int x) { return x * 839 + 838; }
+int helper_0839(int x) { return x * 840 + 839; }
+int helper_0840(int x) { return x * 841 + 840; }
+int helper_0841(int x) { return x * 842 + 841; }
+int helper_0842(int x) { return x * 843 + 842; }
+int helper_0843(int x) { return x * 844 + 843; }
+int helper_0844(int x) { return x * 845 + 844; }
+int helper_0845(int x) { return x * 846 + 845; }
+int helper_0846(int x) { return x * 847 + 846; }
+int helper_0847(int x) { return x * 848 + 847; }
+int helper_0848(int x) { return x * 849 + 848; }
+int helper_0849(int x) { return x * 850 + 849; }
+int helper_0850(int x) { return x * 851 + 850; }
+int helper_0851(int x) { return x * 852 + 851; }
+int helper_0852(int x) { return x * 853 + 852; }
+int helper_0853(int x) { return x * 854 + 853; }
+int helper_0854(int x) { return x * 855 + 854; }
+int helper_0855(int x) { return x * 856 + 855; }
+int helper_0856(int x) { return x * 857 + 856; }
+int helper_0857(int x) { return x * 858 + 857; }
+int helper_0858(int x) { return x * 859 + 858; }
+int helper_0859(int x) { return x * 860 + 859; }
+int helper_0860(int x) { return x * 861 + 860; }
+int helper_0861(int x) { return x * 862 + 861; }
+int helper_0862(int x) { return x * 863 + 862; }
+int helper_0863(int x) { return x * 864 + 863; }
+int helper_0864(int x) { return x * 865 + 864; }
+int helper_0865(int x) { return x * 866 + 865; }
+int helper_0866(int x) { return x * 867 + 866; }
+int helper_0867(int x) { return x * 868 + 867; }
+int helper_0868(int x) { return x * 869 + 868; }
+int helper_0869(int x) { return x * 870 + 869; }
+int helper_0870(int x) { return x * 871 + 870; }
+int helper_0871(int x) { return x * 872 + 871; }
+int helper_0872(int x) { return x * 873 + 872; }
+int helper_0873(int x) { return x * 874 + 873; }
+int helper_0874(int x) { return x * 875 + 874; }
+int helper_0875(int x) { return x * 876 + 875; }
+int helper_0876(int x) { return x * 877 + 876; }
+int helper_0877(int x) { return x * 878 + 877; }
+int helper_0878(int x) { return x * 879 + 878; }
+int helper_0879(int x) { return x * 880 + 879; }
+int helper_0880(int x) { return x * 881 + 880; }
+int helper_0881(int x) { return x * 882 + 881; }
+int helper_0882(int x) { return x * 883 + 882; }
+int helper_0883(int x) { return x * 884 + 883; }
+int helper_0884(int x) { return x * 885 + 884; }
+int helper_0885(int x) { return x * 886 + 885; }
+int helper_0886(int x) { return x * 887 + 886; }
+int helper_0887(int x) { return x * 888 + 887; }
+int helper_0888(int x) { return x * 889 + 888; }
+int helper_0889(int x) { return x * 890 + 889; }
+int helper_0890(int x) { return x * 891 + 890; }
+int helper_0891(int x) { return x * 892 + 891; }
+int helper_0892(int x) { return x * 893 + 892; }
+int helper_0893(int x) { return x * 894 + 893; }
+int helper_0894(int x) { return x * 895 + 894; }
+int helper_0895(int x) { return x * 896 + 895; }
+int helper_0896(int x) { return x * 897 + 896; }
+int helper_0897(int x) { return x * 898 + 897; }
+int helper_0898(int x) { return x * 899 + 898; }
+int helper_0899(int x) { return x * 900 + 899; }
+int helper_0900(int x) { return x * 901 + 900; }
+int helper_0901(int x) { return x * 902 + 901; }
+int helper_0902(int x) { return x * 903 + 902; }
+int helper_0903(int x) { return x * 904 + 903; }
+int helper_0904(int x) { return x * 905 + 904; }
+int helper_0905(int x) { return x * 906 + 905; }
+int helper_0906(int x) { return x * 907 + 906; }
+int helper_0907(int x) { return x * 908 + 907; }
+int helper_0908(int x) { return x * 909 + 908; }
+int helper_0909(int x) { return x * 910 + 909; }
+int helper_0910(int x) { return x * 911 + 910; }
+int helper_0911(int x) { return x * 912 + 911; }
+int helper_0912(int x) { return x * 913 + 912; }
+int helper_0913(int x) { return x * 914 + 913; }
+int helper_0914(int x) { return x * 915 + 914; }
+int helper_0915(int x) { return x * 916 + 915; }
+int helper_0916(int x) { return x * 917 + 916; }
+int helper_0917(int x) { return x * 918 + 917; }
+int helper_0918(int x) { return x * 919 + 918; }
+int helper_0919(int x) { return x * 920 + 919; }
+int helper_0920(int x) { return x * 921 + 920; }
+int helper_0921(int x) { return x * 922 + 921; }
+int helper_0922(int x) { return x * 923 + 922; }
+int helper_0923(int x) { return x * 924 + 923; }
+int helper_0924(int x) { return x * 925 + 924; }
+int helper_0925(int x) { return x * 926 + 925; }
+int helper_0926(int x) { return x * 927 + 926; }
+int helper_0927(int x) { return x * 928 + 927; }
+int helper_0928(int x) { return x * 929 + 928; }
+int helper_0929(int x) { return x * 930 + 929; }
+int helper_0930(int x) { return x * 931 + 930; }
+int helper_0931(int x) { return x * 932 + 931; }
+int helper_0932(int x) { return x * 933 + 932; }
+int helper_0933(int x) { return x * 934 + 933; }
+int helper_0934(int x) { return x * 935 + 934; }
+int helper_0935(int x) { return x * 936 + 935; }
+int helper_0936(int x) { return x * 937 + 936; }
+int helper_0937(int x) { return x * 938 + 937; }
+int helper_0938(int x) { return x * 939 + 938; }
+int helper_0939(int x) { return x * 940 + 939; }
+int helper_0940(int x) { return x * 941 + 940; }
+int helper_0941(int x) { return x * 942 + 941; }
+int helper_0942(int x) { return x * 943 + 942; }
+int helper_0943(int x) { return x * 944 + 943; }
+int helper_0944(int x) { return x * 945 + 944; }
+int helper_0945(int x) { return x * 946 + 945; }
+int helper_0946(int x) { return x * 947 + 946; }
+int helper_0947(int x) { return x * 948 + 947; }
+int helper_0948(int x) { return x * 949 + 948; }
+int helper_0949(int x) { return x * 950 + 949; }
+int helper_0950(int x) { return x * 951 + 950; }
+int helper_0951(int x) { return x * 952 + 951; }
+int helper_0952(int x) { return x * 953 + 952; }
+int helper_0953(int x) { return x * 954 + 953; }
+int helper_0954(int x) { return x * 955 + 954; }
+int helper_0955(int x) { return x * 956 + 955; }
+int helper_0956(int x) { return x * 957 + 956; }
+int helper_0957(int x) { return x * 958 + 957; }
+int helper_0958(int x) { return x * 959 + 958; }
+int helper_0959(int x) { return x * 960 + 959; }
+int helper_0960(int x) { return x * 961 + 960; }
+int helper_0961(int x) { return x * 962 + 961; }
+int helper_0962(int x) { return x * 963 + 962; }
+int helper_0963(int x) { return x * 964 + 963; }
+int helper_0964(int x) { return x * 965 + 964; }
+int helper_0965(int x) { return x * 966 + 965; }
+int helper_0966(int x) { return x * 967 + 966; }
+int helper_0967(int x) { return x * 968 + 967; }
+int helper_0968(int x) { return x * 969 + 968; }
+int helper_0969(int x) { return x * 970 + 969; }
+int helper_0970(int x) { return x * 971 + 970; }
+int helper_0971(int x) { return x * 972 + 971; }
+int helper_0972(int x) { return x * 973 + 972; }
+int helper_0973(int x) { return x * 974 + 973; }
+int helper_0974(int x) { return x * 975 + 974; }
+int helper_0975(int x) { return x * 976 + 975; }
+int helper_0976(int x) { return x * 977 + 976; }
+int helper_0977(int x) { return x * 978 + 977; }
+int helper_0978(int x) { return x * 979 + 978; }
+int helper_0979(int x) { return x * 980 + 979; }
+int helper_0980(int x) { return x * 981 + 980; }
+int helper_0981(int x) { return x * 982 + 981; }
+int helper_0982(int x) { return x * 983 + 982; }
+int helper_0983(int x) { return x * 984 + 983; }
+int helper_0984(int x) { return x * 985 + 984; }
+int helper_0985(int x) { return x * 986 + 985; }
+int helper_0986(int x) { return x * 987 + 986; }
+int helper_0987(int x) { return x * 988 + 987; }
+int helper_0988(int x) { return x * 989 + 988; }
+int helper_0989(int x) { return x * 990 + 989; }
+int helper_0990(int x) { return x * 991 + 990; }
+int helper_0991(int x) { return x * 992 + 991; }
+int helper_0992(int x) { return x * 993 + 992; }
+int helper_0993(int x) { return x * 994 + 993; }
+int helper_0994(int x) { return x * 995 + 994; }
+int helper_0995(int x) { return x * 996 + 995; }
+int helper_0996(int x) { return x * 997 + 996; }
+int helper_0997(int x) { return x * 998 + 997; }
+int helper_0998(int x) { return x * 999 + 998; }
+int helper_0999(int x) { return x * 1000 + 999; }
+int helper_1000(int x) { return x * 1001 + 1000; }
+int helper_1001(int x) { return x * 1002 + 1001; }
+int helper_1002(int x) { return x * 1003 + 1002; }
+int helper_1003(int x) { return x * 1004 + 1003; }
+int helper_1004(int x) { return x * 1005 + 1004; }
+int helper_1005(int x) { return x * 1006 + 1005; }
+int helper_1006(int x) { return x * 1007 + 1006; }
+int helper_1007(int x) { return x * 1008 + 1007; }
+int helper_1008(int x) { return x * 1009 + 1008; }
+int helper_1009(int x) { return x * 1010 + 1009; }
+int helper_1010(int x) { return x * 1011 + 1010; }
+int helper_1011(int x) { return x * 1012 + 1011; }
+int helper_1012(int x) { return x * 1013 + 1012; }
+int helper_1013(int x) { return x * 1014 + 1013; }
+int helper_1014(int x) { return x * 1015 + 1014; }
+int helper_1015(int x) { return x * 1016 + 1015; }
+int helper_1016(int x) { return x * 1017 + 1016; }
+int helper_1017(int x) { return x * 1018 + 1017; }
+int helper_1018(int x) { return x * 1019 + 1018; }
+int helper_1019(int x) { return x * 1020 + 1019; }
+int helper_1020(int x) { return x * 1021 + 1020; }
+int helper_1021(int x) { return x * 1022 + 1021; }
+int helper_1022(int x) { return x * 1023 + 1022; }
+int helper_1023(int x) { return x * 1024 + 1023; }
+int helper_1024(int x) { return x * 1025 + 1024; }
+int helper_1025(int x) { return x * 1026 + 1025; }
+int helper_1026(int x) { return x * 1027 + 1026; }
+int helper_1027(int x) { return x * 1028 + 1027; }
+int helper_1028(int x) { return x * 1029 + 1028; }
+int helper_1029(int x) { return x * 1030 + 1029; }
+int helper_1030(int x) { return x * 1031 + 1030; }
+int helper_1031(int x) { return x * 1032 + 1031; }
+int helper_1032(int x) { return x * 1033 + 1032; }
+int helper_1033(int x) { return x * 1034 + 1033; }
+int helper_1034(int x) { return x * 1035 + 1034; }
+int helper_1035(int x) { return x * 1036 + 1035; }
+int helper_1036(int x) { return x * 1037 + 1036; }
+int helper_1037(int x) { return x * 1038 + 1037; }
+int helper_1038(int x) { return x * 1039 + 1038; }
+int helper_1039(int x) { return x * 1040 + 1039; }
+int helper_1040(int x) { return x * 1041 + 1040; }
+int helper_1041(int x) { return x * 1042 + 1041; }
+int helper_1042(int x) { return x * 1043 + 1042; }
+int helper_1043(int x) { return x * 1044 + 1043; }
+int helper_1044(int x) { return x * 1045 + 1044; }
+int helper_1045(int x) { return x * 1046 + 1045; }
+int helper_1046(int x) { return x * 1047 + 1046; }
+int helper_1047(int x) { return x * 1048 + 1047; }
+int helper_1048(int x) { return x * 1049 + 1048; }
+int helper_1049(int x) { return x * 1050 + 1049; }
+int helper_1050(int x) { return x * 1051 + 1050; }
+int helper_1051(int x) { return x * 1052 + 1051; }
+int helper_1052(int x) { return x * 1053 + 1052; }
+int helper_1053(int x) { return x * 1054 + 1053; }
+int helper_1054(int x) { return x * 1055 + 1054; }
+int helper_1055(int x) { return x * 1056 + 1055; }
+int helper_1056(int x) { return x * 1057 + 1056; }
+int helper_1057(int x) { return x * 1058 + 1057; }
+int helper_1058(int x) { return x * 1059 + 1058; }
+int helper_1059(int x) { return x * 1060 + 1059; }
+int helper_1060(int x) { return x * 1061 + 1060; }
+int helper_1061(int x) { return x * 1062 + 1061; }
+int helper_1062(int x) { return x * 1063 + 1062; }
+int helper_1063(int x) { return x * 1064 + 1063; }
+int helper_1064(int x) { return x * 1065 + 1064; }
+int helper_1065(int x) { return x * 1066 + 1065; }
+int helper_1066(int x) { return x * 1067 + 1066; }
+int helper_1067(int x) { return x * 1068 + 1067; }
+int helper_1068(int x) { return x * 1069 + 1068; }
+int helper_1069(int x) { return x * 1070 + 1069; }
+int helper_1070(int x) { return x * 1071 + 1070; }
+int helper_1071(int x) { return x * 1072 + 1071; }
+int helper_1072(int x) { return x * 1073 + 1072; }
+int helper_1073(int x) { return x * 1074 + 1073; }
+int helper_1074(int x) { return x * 1075 + 1074; }
+int helper_1075(int x) { return x * 1076 + 1075; }
+int helper_1076(int x) { return x * 1077 + 1076; }
+int helper_1077(int x) { return x * 1078 + 1077; }
+int helper_1078(int x) { return x * 1079 + 1078; }
+int helper_1079(int x) { return x * 1080 + 1079; }
+int helper_1080(int x) { return x * 1081 + 1080; }
+int helper_1081(int x) { return x * 1082 + 1081; }
+int helper_1082(int x) { return x * 1083 + 1082; }
+int helper_1083(int x) { return x * 1084 + 1083; }
+int helper_1084(int x) { return x * 1085 + 1084; }
+int helper_1085(int x) { return x * 1086 + 1085; }
+int helper_1086(int x) { return x * 1087 + 1086; }
+int helper_1087(int x) { return x * 1088 + 1087; }
+int helper_1088(int x) { return x * 1089 + 1088; }
+int helper_1089(int x) { return x * 1090 + 1089; }
+int helper_1090(int x) { return x * 1091 + 1090; }
+int helper_1091(int x) { return x * 1092 + 1091; }
+int helper_1092(int x) { return x * 1093 + 1092; }
+int helper_1093(int x) { return x * 1094 + 1093; }
+int helper_1094(int x) { return x * 1095 + 1094; }
+int helper_1095(int x) { return x * 1096 + 1095; }
+int helper_1096(int x) { return x * 1097 + 1096; }
+int helper_1097(int x) { return x * 1098 + 1097; }
+int helper_1098(int x) { return x * 1099 + 1098; }
+int helper_1099(int x) { return x * 1100 + 1099; }
+int helper_1100(int x) { return x * 1101 + 1100; }
+int helper_1101(int x) { return x * 1102 + 1101; }
+int helper_1102(int x) { return x * 1103 + 1102; }
+int helper_1103(int x) { return x * 1104 + 1103; }
+int helper_1104(int x) { return x * 1105 + 1104; }
+int helper_1105(int x) { return x * 1106 + 1105; }
+int helper_1106(int x) { return x * 1107 + 1106; }
+int helper_1107(int x) { return x * 1108 + 1107; }
+int helper_1108(int x) { return x * 1109 + 1108; }
+int helper_1109(int x) { return x * 1110 + 1109; }
+int helper_1110(int x) { return x * 1111 + 1110; }
+int helper_1111(int x) { return x * 1112 + 1111; }
+int helper_1112(int x) { return x * 1113 + 1112; }
+int helper_1113(int x) { return x * 1114 + 1113; }
+int helper_1114(int x) { return x * 1115 + 1114; }
+int helper_1115(int x) { return x * 1116 + 1115; }
+int helper_1116(int x) { return x * 1117 + 1116; }
+int helper_1117(int x) { return x * 1118 + 1117; }
+int helper_1118(int x) { return x * 1119 + 1118; }
+int helper_1119(int x) { return x * 1120 + 1119; }
+int helper_1120(int x) { return x * 1121 + 1120; }
+int helper_1121(int x) { return x * 1122 + 1121; }
+int helper_1122(int x) { return x * 1123 + 1122; }
+int helper_1123(int x) { return x * 1124 + 1123; }
+int helper_1124(int x) { return x * 1125 + 1124; }
+int helper_1125(int x) { return x * 1126 + 1125; }
+int helper_1126(int x) { return x * 1127 + 1126; }
+int helper_1127(int x) { return x * 1128 + 1127; }
+int helper_1128(int x) { return x * 1129 + 1128; }
+int helper_1129(int x) { return x * 1130 + 1129; }
+int helper_1130(int x) { return x * 1131 + 1130; }
+int helper_1131(int x) { return x * 1132 + 1131; }
+int helper_1132(int x) { return x * 1133 + 1132; }
+int helper_1133(int x) { return x * 1134 + 1133; }
+int helper_1134(int x) { return x * 1135 + 1134; }
+int helper_1135(int x) { return x * 1136 + 1135; }
+int helper_1136(int x) { return x * 1137 + 1136; }
+int helper_1137(int x) { return x * 1138 + 1137; }
+int helper_1138(int x) { return x * 1139 + 1138; }
+int helper_1139(int x) { return x * 1140 + 1139; }
+int helper_1140(int x) { return x * 1141 + 1140; }
+int helper_1141(int x) { return x * 1142 + 1141; }
+int helper_1142(int x) { return x * 1143 + 1142; }
+int helper_1143(int x) { return x * 1144 + 1143; }
+int helper_1144(int x) { return x * 1145 + 1144; }
+int helper_1145(int x) { return x * 1146 + 1145; }
+int helper_1146(int x) { return x * 1147 + 1146; }
+int helper_1147(int x) { return x * 1148 + 1147; }
+int helper_1148(int x) { return x * 1149 + 1148; }
+int helper_1149(int x) { return x * 1150 + 1149; }
+int helper_1150(int x) { return x * 1151 + 1150; }
+int helper_1151(int x) { return x * 1152 + 1151; }
+int helper_1152(int x) { return x * 1153 + 1152; }
+int helper_1153(int x) { return x * 1154 + 1153; }
+int helper_1154(int x) { return x * 1155 + 1154; }
+int helper_1155(int x) { return x * 1156 + 1155; }
+int helper_1156(int x) { return x * 1157 + 1156; }
+int helper_1157(int x) { return x * 1158 + 1157; }
+int helper_1158(int x) { return x * 1159 + 1158; }
+int helper_1159(int x) { return x * 1160 + 1159; }
+int helper_1160(int x) { return x * 1161 + 1160; }
+int helper_1161(int x) { return x * 1162 + 1161; }
+int helper_1162(int x) { return x * 1163 + 1162; }
+int helper_1163(int x) { return x * 1164 + 1163; }
+int helper_1164(int x) { return x * 1165 + 1164; }
+int helper_1165(int x) { return x * 1166 + 1165; }
+int helper_1166(int x) { return x * 1167 + 1166; }
+int helper_1167(int x) { return x * 1168 + 1167; }
+int helper_1168(int x) { return x * 1169 + 1168; }
+int helper_1169(int x) { return x * 1170 + 1169; }
+int helper_1170(int x) { return x * 1171 + 1170; }
+int helper_1171(int x) { return x * 1172 + 1171; }
+int helper_1172(int x) { return x * 1173 + 1172; }
+int helper_1173(int x) { return x * 1174 + 1173; }
+int helper_1174(int x) { return x * 1175 + 1174; }
+int helper_1175(int x) { return x * 1176 + 1175; }
+int helper_1176(int x) { return x * 1177 + 1176; }
+int helper_1177(int x) { return x * 1178 + 1177; }
+int helper_1178(int x) { return x * 1179 + 1178; }
+int helper_1179(int x) { return x * 1180 + 1179; }
+int helper_1180(int x) { return x * 1181 + 1180; }
+int helper_1181(int x) { return x * 1182 + 1181; }
+int helper_1182(int x) { return x * 1183 + 1182; }
+int helper_1183(int x) { return x * 1184 + 1183; }
+int helper_1184(int x) { return x * 1185 + 1184; }
+int helper_1185(int x) { return x * 1186 + 1185; }
+int helper_1186(int x) { return x * 1187 + 1186; }
+int helper_1187(int x) { return x * 1188 + 1187; }
+int helper_1188(int x) { return x * 1189 + 1188; }
+int helper_1189(int x) { return x * 1190 + 1189; }
+int file_too_long_entry(void) { return helper_0000(1); }
