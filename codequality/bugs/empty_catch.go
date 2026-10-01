@@ -1,8 +1,7 @@
-// RULE: empty-catch (MEDIUM) | lang: go
+// RULE: empty-catch | lang: go — truly empty error handler
 package bugs
-func doThing() error { return nil }
-func Risky(){
-	if err := doThing(); err != nil {
-		// empty error handler: swallowed
+func doThingEC() error { return nil }
+func RiskyEC() {
+	if err := doThingEC(); err != nil {
 	}
 }
