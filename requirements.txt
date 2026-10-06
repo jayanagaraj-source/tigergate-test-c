@@ -2,7 +2,7 @@
 Flask==0.12.2
 Jinja2==2.10
 requests==2.19.1
-PyYAML==3.13
+PyYAML==5.1.0
 urllib3==1.24.1
 cryptography==2.3
 Django==2.0.0
