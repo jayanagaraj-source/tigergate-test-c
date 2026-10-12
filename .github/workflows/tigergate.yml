@@ -67,7 +67,7 @@ jobs:
 
     env:
       TIGERGATE_API_KEY: ${{ secrets.TIGERGATE_API_KEY }}
-      TIGERGATE_API_URL: https://api.staging.tigergate.dev
+      TIGERGATE_API_URL: https://app.staging.tigergate.dev
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # PR runs use the defaults; workflow_dispatch overrides them.
       SCAN_TYPE: ${{ inputs.scan_type || 'all' }}
