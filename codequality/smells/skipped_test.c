@@ -13,3 +13,8 @@ void test_feature(void) {
 int test_other(void) {
     return 0; /* SKIP: real assertions removed, test is a no-op */
 }
+/* RULE: skipped-test | lang: c */
+#if 0
+void test_disabled(void) {}
+#endif
+int test_noop(void) { return 0; }
