@@ -1,46 +1,16 @@
-# Bug-rule fixtures (TigerGate Code Quality -> Bug)
+# Bug-rule fixtures — C only (TigerGate Code Quality -> Bug)
 
-Each rule has fixtures in the languages the Rules Catalog lists for it (from the
-image), plus a C fixture to test whether the rule also applies to this repo's
-own language. Mark "Fired?" after your scan.
+Every fixture is C, since this repo is scanned as C. Rules that have no native
+C construct use the closest C equivalent, so you can check whether TigerGate
+detects them in C. Mark "Fired?" after the scan.
 
-## debugger-statement (HIGH) — JS, TS, Ruby, Python, PHP
-| File | Language | Fired? |
-|------|----------|--------|
-| debugger.js  | javascript | [ ] |
-| debugger.ts  | typescript | [ ] |
-| debugger.py  | python     | [ ] |
-| debugger.rb  | ruby       | [ ] |
-| debugger.php | php        | [ ] |
-| debugger_statement.c | c (not in rule scope) | [ ] |
+| Rule ID | Severity | File | C construct used | Fired? |
+|---------|----------|------|------------------|--------|
+| debugger-statement | HIGH   | debugger_statement.c | __builtin_trap / raise(SIGTRAP) / int3 / assert(0) | [ ] |
+| empty-catch        | MEDIUM | empty_catch.c        | empty error branch `if (rc) { }` | [ ] |
+| swallowed-error    | MEDIUM | swallowed_error.c    | return value assigned then discarded | [ ] |
+| broad-catch        | MEDIUM | broad_catch.c        | one catch-all signal/setjmp handler | [ ] |
 
-## empty-catch (MEDIUM) — Go, Java, C#, Kotlin, Scala, JS, TS, PHP, Swift, Rust, Dart, C++
-| File | Language | Fired? |
-|------|----------|--------|
-| empty_catch.go    | go        | [ ] |
-| EmptyCatch.java   | java      | [ ] |
-| EmptyCatch.cs     | csharp    | [ ] |
-| EmptyCatch.kt     | kotlin    | [ ] |
-| EmptyCatch.scala  | scala     | [ ] |
-| empty_catch.js    | javascript| [ ] |
-| empty_catch.ts    | typescript| [ ] |
-| empty_catch.php   | php       | [ ] |
-| empty_catch.swift | swift     | [ ] |
-| empty_catch.rs    | rust      | [ ] |
-| empty_catch.dart  | dart      | [ ] |
-| empty_catch.cpp   | cpp       | [ ] |
-| empty_catch.c     | c (not in rule scope) | [ ] |
-
-## swallowed-error (MEDIUM) — Go
-| File | Language | Fired? |
-|------|----------|--------|
-| swallowed_error.go | go | [ ] |
-| swallowed_error.c  | c (not in rule scope) | [ ] |
-
-## broad-catch (MEDIUM) — Java, C#, Python
-| File | Language | Fired? |
-|------|----------|--------|
-| BroadCatch.java | java   | [ ] |
-| BroadCatch.cs   | csharp | [ ] |
-| broad_catch.py  | python | [ ] |
-| broad_catch.c   | c (not in rule scope) | [ ] |
+Note: per TigerGate's Rules Catalog none of these four list C (empty-catch
+lists C++). If a fixture here is NOT flagged, that is the expected
+language-scope behavior; if it IS flagged, TigerGate applies the rule to C.
