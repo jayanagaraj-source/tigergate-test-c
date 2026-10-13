@@ -14,7 +14,7 @@
     "node-fetch": "2.6.0",
     "moment": "2.19.3"
   },
-  "overrides": {
+  "overrides": { "proxy-addr": "2.0.8",
     "qs": "6.5.3"
   }
 }
