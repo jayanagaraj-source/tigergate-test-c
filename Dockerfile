@@ -22,4 +22,5 @@ RUN npm install --unsafe-perm
 
 # DL3025: shell-form CMD; app listens on all interfaces
 EXPOSE 3000
+USER non-root
 CMD node server.js --host 0.0.0.0
